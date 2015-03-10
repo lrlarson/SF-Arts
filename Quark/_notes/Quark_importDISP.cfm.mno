@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_Recordset1" value="name:Event_Name;datatype:LONGCHAR,name:Venue_Name;datatype:LONGCHAR,name:ID;datatype:INTEGER,name:ID2;datatype:INTEGER,name:Venue_address;datatype:LONGCHAR,name:Event_Phone;datatype:LONGCHAR,name:Date_String;datatype:LONGCHAR,name:Time_String;datatype:LONGCHAR,name:Ticket_String;datatype:LONGCHAR,name:Event_Description;datatype:LONGCHAR" />
+</info>

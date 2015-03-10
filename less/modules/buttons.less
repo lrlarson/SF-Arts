@@ -1,0 +1,241 @@
+//
+// Buttons
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+.btn,
+.btn-group > .btn,
+.btn-group > .dropdown-menu,
+.btn-group > .popover {
+  font-size: @base-font-size * .7058; /* 12px */
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-family:'Avenir Next LT W01 Demi';
+}
+.btn-block + .btn-block {
+  margin-top:@global-padding/2;
+}
+.btn:hover { background-color: @primary-blue; }
+
+/* Info box style that is similar to button style */
+.info-box {
+  margin-top: @global-padding/2;
+  margin-bottom: @global-padding/2;
+  font-size: @base-font-size /* 14px */
+  color:@button-text;
+  background:@button-bg;
+  padding: 10px 12px 10px;
+  line-height: 20px;
+  text-decoration: none;
+  text-shadow: none;
+  .border-radius(6px);
+  .title { font-family:'Avenir Next LT W01 Demi'; }
+  text-align: center;
+} 
+
+.button-wrap {
+  float:right;
+  margin-left:5px;
+  margin-top:5px;
+}
+
+.btn {
+  border: none;
+  background: @button-bg;
+  color: @button-text;
+  padding: 9px 12px 10px;
+  line-height: 22px;
+  text-decoration: none;
+  text-shadow: none;
+  .border-radius(6px);
+  .box-shadow(none);
+  .transition(0.25s);
+
+  // Alternate states
+  // --------------------------------------------------
+  &:hover,
+  &:focus,
+  .btn-group:focus &.dropdown-toggle {
+    background-color: @button-hover;
+    color: @button-text-hover;
+    outline: none;
+    .transition(0.25s);
+  }
+
+  // Active State
+  &:active,
+  .btn-group.open &.dropdown-toggle,
+  &.active {
+    background-color: @button-active;
+    color: @button-text-active;
+    .box-shadow(none);
+  }
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    background-color: @lightgray;
+    color: fade(@button-text, 75%);
+    .box-shadow(none);
+    .opacity(70);
+  }
+
+  // Button sizes
+  // --------------------------------------------------
+
+  // Large
+  &.btn-large {
+    line-height: 20px;
+    padding: 12px 18px 13px;
+
+    > [class^="fui-"] {
+      top: 0;
+
+      &.pull-right {
+        margin-right: -2px;
+      }
+    }
+  }
+
+  // Set the backgrounds
+  // -------------------------
+  &.btn-primary {
+    .swap-button-color(@firm, @button-primary-hover, @button-primary-active);
+  }
+  &.btn-info    {
+    .swap-button-color(@info, @button-info-hover, @button-info-active);
+  }
+  &.btn-danger  {
+    .swap-button-color(@danger, @button-danger-hover, @button-danger-active);
+  }
+  &.btn-success {
+    .swap-button-color(@success, @button-success-hover, @button-success-active);
+  }
+  &.btn-warning {
+    .swap-button-color(@warning, @button-warning-hover, @button-warning-active);
+  }
+  &.btn-inverse {
+    .swap-button-color(@base, @button-inverse-hover, @button-inverse-active);    
+  }
+  
+  &.btn-blend {
+  
+    letter-spacing:normal; 
+    line-height:.75em;
+    padding:@global-padding/2 @global-padding;
+    background:rgba(0,0,0,.25);
+    color:@inverse;
+    font-family:'Avenir Next LT W01 Demi';
+    font-size: @base-font-size * .8235; /* 14px */
+    text-transform:none;
+    border-radius:3px 3px 3px 3px;
+    &:hover {
+      background:@button-theme-color;
+    }
+    /*
+    &.blue {}
+    &.blue:hover {background:@primary-blue;}
+    &.blue.secondary:hover {background:@secondary-blue;}
+    &.blue:active {color:#ccd6e4; background:rgba(0,0,0,.05)}
+    
+    &.green {}
+    &.green:hover {background:@primary-green;}
+    &.green.secondary:hover {background:@secondary-green;}
+    &.green:active {color:#ccd6e4; background:rgba(0,0,0,.05)}
+    
+    &.orange {background:rgba(0,0,0,.1);}
+    &.orange:hover {background:@primary-orange;}
+    &.orange.secondary:hover {background:@secondary-orange;}
+    &.orange:active {color:#ccd6e4; background:rgba(0,0,0,.03)}
+    */
+  }
+
+  // Button icon
+  // --------------------------------------------------
+  > [class^="fui-"] {
+    margin: 0 4px;
+    position: relative;
+    top: 1px;
+    vertical-align: top;
+    .inline-block();
+
+    &.pull-right {
+      margin-right: 0px;
+    }
+  }
+}
+
+// Other button locations
+// Button with icon inside
+.btn-toolbar .btn {
+  &.active {
+    color: @button-text;
+  }
+  &:first-child {
+    .border-radius(6px 0 0 6px);
+  }
+  &:last-child {
+    .border-radius(0 6px 6px 0);
+  }
+  > [class^="fui-"] {
+    font-size: @icon-normal;
+    top: 0;
+  }
+}
+
+// Button tip
+.btn-tip {
+  font-weight: 300;
+  padding-left: 10px;
+}
+
+// BUTTON GROUP
+// ----------------------
+.btn-group {
+  > .btn {
+    border-radius: 0;
+    text-align: center;
+
+    &:active,
+    &.active {
+      & + .btn {
+        border-left-color: transparent;
+      }
+    }
+    &:first-of-type {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+    &:last-of-type {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+    & + .btn {
+      margin-left: 0;
+    }
+    & + .dropdown-toggle {
+      border-left: 2px solid fade(@base, 15%);
+      padding-left: 13px;
+      padding-right: 13px;
+      .box-shadow(none);
+
+      .caret {
+        margin-left: 3px;
+        margin-right: 3px;
+      }
+    }
+    &.btn-huge + .dropdown-toggle {
+      .caret {
+        margin-left: 7px;
+        margin-right: 7px;
+      }
+    }
+    &.btn-small + .dropdown-toggle {
+      .caret {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {margin: 0px; padding: 0px; background: url(../images/bg.gif) repeat-x;}
+#wrap {width: 990px;}
+#header {height: 80px; padding-top: 20px; text-align: center;}
+#content {text-align: center;}

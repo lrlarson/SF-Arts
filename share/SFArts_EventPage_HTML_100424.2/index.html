@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SFArts.org</title>
+	
+    <link rel="stylesheet" type="text/css" href="css/all.css" media="screen" />
+    
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slidePanel.min.js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function(){
+        
+        // default settings
+        // $('.panel').slidePanel();
+        
+        // custom settings
+        $('#panel').slidePanel({
+            ajax: true,
+            ajaxSource: 'content.html'
+        });
+    });
+    </script>
+    
+</head>
+<body>
+
+<div id="alert">
+    <a href="#" id="trigger"><em>This event has been highlighted by our Theater curator.</em> <strong>READ THE REVIEW</strong></a>
+		<div id="panel" class="panel left"></div>
+  </div>      
+
+<div id="wrapper">
+  <div class="holder">
+  <div id="header">
+    <h1 class="logo"><a href="http://www.sfarts.org/">SFArts.org</a></h1>
+    <ul id="nav">
+      <li><a href="#">Buy Tickets</a></li>
+      <li><a href="#">Search all 783 Events</a></li>
+      <li><a href="http://www.addthis.com/bookmark.php" 
+    						style="text-decoration:none;" 
+       					 class="addthis_button">Share</a></li>
+    </ul>
+  </div>
+  <div id="main">
+    <div class="info">
+      <div class="holder">
+        <div class="row event">
+          <div class="mission"> Event </div>
+          <div class="text-col">
+            <h2>Othello</h2>
+            <strong class="info-box">Mar 26-Apr 18, Fri Mar 26 &amp; Sat Mar 27,<br/>
+              Apr 3,10 &amp; 17 at 8PM; Sun Mar 28, Apr 11&amp;18 at 3PM</strong>
+            <h3><a href="#">African-American Shakespeare Company</a></h3>
+            <h3>Buriel Clay Memorial Theater</h3>
+          </div>
+          <div class="info-col"> $30; $20 seniors &amp; students; Special Early Bird Ticket price of $10 ends on March 13th </div>
+        </div>
+        <div class="row">
+          <div class="mission"> Description </div>
+          <div class="text-col">
+            <p>Told simultaneously from three (Othello, Desdemona, and Iago) points of view, this compelling story re-sets one of Shakespeare's greatest tragedies in a contemporary military regime, where race, class, and sexual politics become the driving force for jealousy and revenge. </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mission"> Location </div>
+        <div class="text-col">
+          <h3>Buriel Clay Memorial Theater</h3>
+          <address>
+            762 Fulton<br/>
+            San Francisco, CA<br/>
+            800-838-3006
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="visual">
+    <div class="flash-holder"> <img src="images/img1.jpg" alt="#" width="670" height="500"/> </div>
+  </div>
+</div>
+<div id="footer">
+  <p>&copy; <script language="javascript"> var d = new Date(); var curr_year = d.getFullYear(); document.write(curr_year); </script> <a href="http://www.sfarts.org/">SFArts.org</a>. All rights reserved.</p>
+</div>
+</div>
+</body>
+</html>

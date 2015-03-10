@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:og="http://opengraphprotocol.org/schema/">  
+  
+<head>
+  <meta charset="utf-8">
+  <title>SF/ARTS</title>
+  <!-- meta name="viewport" content="width=device-width, initial-scale=1.0" -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+  <!-- Loading Bootstrap -->
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Loading Flat UI -->
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  
+  <!-- Loading SF Icons -->
+  <link rel="stylesheet" href="fonts/fontello/css/sfarts_icons.css">
+  <link rel="stylesheet" href="fonts/fontello/css/animation.css">
+    
+  <!--[if IE 7]>
+    <link rel="stylesheet" href="fonts/fontello/sfarts_icons-ie7.css">
+  <![endif]-->    
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+  
+<body class="two-spot feature">
+<div id="wrapper">
+  
+<div class="navbar main-menu">
+  <ul class="nav">
+    <li><a href="#" class="menu-menu sficon-menu" title="Menu"></a></li>
+    <li><a href="#/back" onClick="window.history.go(-1);return false;" class="menu-back sficon-left" title="Back"></a></li>
+    <li><a href="nearby.html" class="menu-location sficon-location" title="Nearby" ></a></li>
+    <li><a href="bookmarks.html" class="menu-bookmarks sficon-star" title="Bookmarks"></a></li>
+    <li><a href="#/search" class="menu-search sficon-search" title="Search"></a></li>
+  </ul>
+</div><!-- /navbar -->
+
+<div class="hide search-bar"><input id="global-search-bar" placeholder="Search..."  /><a id="global-search-submit">Press Enter</a></div>
+
+<div class="menu-bar">
+  <div class="relative">
+  <ul class="menu-list">
+    <li>
+        
+      <a href="#" class="menu-title">
+        <div class="button-wrap"><div href="#" class="btn btn-blend green action-close">Close</div></div>
+        Menu
+      </a>
+    </li>
+    <li><a href="home.html" class="">Home</a></li>
+    <li><a href="features.html" class="">Features</a></li>
+    <li><a href="calendar.html" class="">Calendar Highlights</a></li>
+    <li><a href="search.html#today" class="">Today's Events</a></li>
+    <li><a href="search.html#weekend" class="">This Weekend</a></li>
+    <li>
+      <a href="search.html#genre" class="">Search by Genre</a>
+      <div class="submenu">
+          <ul class="menu-list">
+            <li>
+                      
+              <a href="#" class="menu-title">
+                <div class="button-wrap"><div class="btn btn-blend blue action-apply">Apply</div></div>  
+                Select Genres
+              </a>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Children
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Dance
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Festivals
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Film/Video
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Galleries
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Literary Arts
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              More for Less
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Music
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Museums
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Public Arts
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Theater
+              </label>
+            </li>            
+          </ul>
+        </div>
+          
+    </li>
+    
+    
+    <li>
+      <a href="search.html#date" class="">Search by Date</a>
+      <div class="submenu">
+        <ul class="menu-list">
+          <li>       
+            <a href="#" class="menu-title">
+            <div class="button-wrap"><div class="btn btn-blend blue action-apply">Apply</div></div>
+              Select Dates
+            </a>
+          </li>
+          <li class="menu-pad"><input type="text" class="start-date datepicker" placeholder="Start Date (mm/dd/yyyy)"></li>
+          <li class="menu-pad"><input type="text" class="end-date datepicker" placeholder="End Date (mm/dd/yyyy)"></li>
+        </ul>  
+       </div>   
+    </li>
+    <li>
+      <a href="search.html#location" class="">Search by Location</a>
+      <div class="submenu">
+        <ul class="menu-list">
+          <li>
+            <a href="#" class="menu-title">
+              <div class="button-wrap"><div class="btn btn-blend blue action-apply">Apply</div></div>          
+              Neighborhoods
+            </a>
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Castro/Upper Market
+            </label>
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Chinatown
+            </label>
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Civic Center
+            </label>
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Embarcadero/Financial District
+            </label>
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Fisherman's Wharf
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Haight-Ashbury
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Golden Gate Park/Sunset
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Bayview/Candlestick Point
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Japantown/Fillmore
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Marina/Presidio
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Mission District
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Nob Hill
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            North Beach
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            SOMA/Yerba Buena
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Union Square
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            City Wide
+            </label>            
+          </li>          
+         </ul> 
+      </div>
+    </li>
+    <li>
+      <a href="about.html" class="">About</a>
+      <div class="submenu">
+        <ul class="menu-list">
+          <li><a href="/" class="">Overview</a></li>
+          <li><a href="features.html" class="">Submit Event</a></li>
+          <li><a href="calendar.html" class="">Feedback & Support</a></li>
+          <li><a href="calendar.html" class="">Sponsorship Opportunities</a></li>
+          <li><a href="calendar.html" class="">Terms of Use</a></li>
+          <li><a href="calendar.html" class="">Colophon</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  </div><!-- /relative -->
+</div><!-- /menu-bar -->
+<div class="hide submenu-bar"></div>
+
+  
+  
+<div id="bounds">
+  <div class="header">
+    <div class="button-wrap"><a href="#" class="sficon-remove"></a></div>
+    <div class="message"><a href="#">Get our Monthly Highlights via Email → </a></div>
+  </div>
+    
+  <div id="main-wrap">
+    <div class="inner-wrap scroll-pane overthrow">
+      <div id="top-left" class="spot scroll-pane overthrow">
+        <div class="spothead">
+          <div class="button-wrap"><div class="btn btn-blend secondary orange action-toggle">More</div></div>  
+          <h3 class="title">Features</h3>
+        </div><!-- /spothead -->
+        <div class="inner">  
+          <ul class="side-list">          
+            <li><h4>May 2013</h4>
+              <ul>
+                <li><a href="#"><div class="detail title">Ginsberg’s “Celestial Snapshots” on Display at CJM</div></a></li>  
+                <li><a href="#"><div class="detail title">Robert Moses’ Kin “Fable & Faith” Looks at How We Live Our Lives</div></a></li>  
+                <li><a href="#"><div class="detail title">Alvin Ailey American Dance Theater</div></a></li>  
+                <li><a href="#"><div class="detail title">Cross Current</div></a></li>  
+              </ul>
+            </li>
+            <li><h4>April 2013</h4>
+              <ul>
+                <li><a href="#"><div class="detail title">Alonzo King LINES Ballet</div></a></li>   
+                <li><a href="#"><div class="detail title">Marin Ballet</div></a></li>   
+                <li><a href="#"><div class="detail title">Cuba Caribe</div></a></li>   
+                <li><a href="#"><div class="detail title">FlowShow/San Francisco</div></a></li>   
+                <li><a href="#"><div class="detail title">Some Other Show</div></a></li>     
+              </ul>
+            </li>
+            <li><h4>March 2013</h4>
+              <ul>
+                <li><a href="#"><div class="detail title">Alonzo King LINES Ballet</div></a></li>   
+                <li><a href="#"><div class="detail title">Marin Ballet</div></a></li>   
+                <li><a href="#"><div class="detail title">Cuba Caribe</div></a></li>   
+                <li><a href="#"><div class="detail title">FlowShow/San Francisco</div></a></li>   
+                <li><a href="#"><div class="detail title">Some Other Show</div></a></li>   
+              
+              </ul>
+            </li>              
+          </ul>   
+        </div><!-- .inner -->  
+      </div><!-- /#top-left -->
+      <div class="middle-center-bottom-right overthrow">
+        <div id="middle-center" class="spot scroll-pane overthrow">
+          
+          <div class="spothead">
+            <div class="navbar actions">
+              <ul class="nav">
+                <li class="dropdown">
+                  <a href="#" class="sficon-facebook"></a>
+                </li>
+                <li><a href="#" class="sficon-twitter"></a></li>
+                <li class="#"><a href="#" class="sficon-paper-plane"></a></li>
+              </ul>
+            </div><!-- /navbar -->
+            
+          </div><!-- /spothead -->
+          <div class="feature-cover">
+            <img src="temp/ginsberg.png">
+            <div class="fade-overlay">
+              <h1 class="title">Robert Moses’ Kin “Fable & Faith” Looks at How We Live Our Lives</h1>
+              <h5 class="author">Jean Schiffman </h5>
+            </div>
+          </div>          
+          <div class="inner">
+            <p class="caption">© Proin purus sapien, consequat et lacinia quis, rutrum ut erat. In eu nibh a risus dignissim pharetra pellentesque congue metus et odio laoreet mollis.</p>
+            <p>
+            In the fall of 1953, Allen Ginsberg photographed novelist Jack Kerouac wandering through the Lower East Side. Kerouac is glancing sideways at the camera, his mouth forming an O shape. A statue in the background, with upraised arm, emerges comically from his head. According to Ginsberg's scribbled caption, Kerouac is making a "Dostoyevsky mad-face or Russian basso bebop Om."
+            </p>
+            <p>
+            Captions like that, as Contemporary Jewish Museum assistant curator Colleen Stockmann points out, make "Beat Memories: The Photographs of Allen Ginsberg"--an exhibit of more than 80 photos opening at the CJM this month--not just a visual but also a literary treat. "What an incredible way of describing his friend," Stockmann notes.
+            </p>
+            <p>
+            Best known as a Beat poet, Ginsberg acknowledged, in a 1991 interview in San Francisco, "If you establish yourself in one field, it's possible thatpeople then take you seriously in another. Maybe too seriously." He himself was apparently realistic about his photography skills. Taking photographs, for him, was just plain fun; originally, the images were intended as keepsakes for 
+            </p>     
+            <h1>H1 :: Robert Moses</h1>
+            <h2>H2 :: World Music</h2>
+            <h3>H3 :: Header Title</h3>
+            <h4>H4 :: Event Pod Title </h4>
+            <h5>H5 :: Column Header & Button</h5>
+            <h6>H6 :: Author Name</h6>
+              
+            <ul>
+              <li>Duis fringilla tincidunt magna et</li>
+              <li>Vitae Nunc id nisi lectus etiam vel metus</li> 
+              <li>Duis fringilla tincidunt magna et</li>   
+            </ul>
+      
+            <ol>
+              <li>Duis fringilla tincidunt magna et</li>
+              <li>Vitae Nunc id nisi lectus etiam vel metus</li> 
+              <li>Duis fringilla tincidunt magna et</li>   
+            </ol>        
+              
+            <p class="lead-text">
+            LEAD TEXT :: Aenean sollicitudin fermentum justo rutrum blandit. Pellentes mattis mattis odio nec luctus.   
+            </p>
+            
+            <p class="event-body">
+              EVENT body...Duis fringilla tincidunt magna, et pellentesque enim aliquet vitae. Nunc id nisi lectus. Etiam vel metus ac lorem tincidunt pharetra in quis turpis. Aenean sollicitudin fermentum justo rutrum blandit. Pellentesque mattis mattis odio nec.
+              Mauris nec justo at libero pharetra euismod quis in tortor. Proin at euismod odio.  
+            </p>
+            
+            <p>
+              Paragraphs...Duis fringilla tincidunt magna, et pellentesque enim aliquet vitae. Nunc id nisi lectus. Etiam vel metus ac lorem tincidunt pharetra in quis turpis. Aenean sollicitudin fermentum justo rutrum blandit. Pellentesque mattis mattis odio nec.
+              Mauris nec justo at libero pharetra euismod quis in tortor. Proin at euismod odio.
+            </p>
+            <p>
+              Paragraphs...Duis fringilla tincidunt magna, et pellentesque enim aliquet vitae. Nunc id nisi lectus. Etiam vel metus ac lorem tincidunt pharetra in quis turpis. Aenean sollicitudin fermentum justo rutrum blandit. Pellentesque mattis mattis odio nec.
+              Mauris nec justo at libero pharetra euismod quis in tortor. Proin at euismod odio.
+            </p>      
+              
+            <p class="caption">CAPTION :: © Proin purus sapien, consequat et lacinia quis, rutrum ut erat. In eu nibh a risus dignissim pharetra pellentesque congue metus et odio laoreet mollis.</p>
+            
+            <blockquote>
+              <p>Duis fringilla tincidunt magna, et 
+              pellentesque enim aliquet vitae nunc 
+              id nisi lectus Etiam vel metus ac<p>
+              <footer>— Steve Jobs, CEO Apple </footer>
+            </blockquote>
+                
+          </div><!-- /.inner -->
+        </div><!-- /#middle-center -->
+        
+        <div id="bottom-right" class="spot scroll-pane overthrow">
+          <div class="spothead">
+            <h5 class="title"></h5>
+          </div>
+          <div class="inner">
+    
+          </div><!-- /.inner -->    
+        </div><!-- /#bottom-right -->
+      </div><!--/#middle-center-bottom-right -->
+      <div class="overlay"></div>
+    </div><!-- /.inner-wrap -->
+  </div><!-- /#main-wrap -->
+</div><!--/ #bounds -->
+
+</div><!-- /#wrapper -->
+
+
+  <!-- Load JS here for best performance -->
+  
+  <script type="text/javascript">
+      less = {
+          env: "development", // or "production"
+          dumpLineNumbers: "mediaquery"
+      };
+  </script>
+  
+  <script src="js/less.min.js"></script>
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/a130c1a8-90b4-49d3-b459-6e4ce45cea2e.js"></script>
+
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-select.js"></script>
+  <script src="js/bootstrap-switch.js"></script>
+  <script src="js/flatui-checkbox.js"></script>
+  <script src="js/flatui-radio.js"></script>
+  <script src="js/jquery.tagsinput.js"></script>
+  <script src="js/jquery.placeholder.js"></script>
+  <script src="js/jquery.stacktable.js"></script>
+  <script src="js/video.js"></script>
+
+  <script src="js/fixedfixed.min.js"></script>
+  <script src="js/overthrow.js"></script>
+  <script src="js/modernizr-latest.js"></script>
+  <script src="js/response.min.js"></script>
+  <script src="js/sfARTS.js"></script>
+
+  <script src="js/nicescroll/jquery.nicescroll.min.js"></script> 
+  <script src="js/waypoints.min.js"></script>  
+  <script src="js/masonry.min.js"></script>
+  <script src="js/jquery.cycle2.min.js"></script>
+  <script src="js/jquery.cycle2.swipe.min.js"></script>
+  <script src="js/cycle2-ios6fix.js"></script>
+  <script src="js/jquery.touchswipe.min.js"></script>
+  <script src="js/imagesloaded.min.js"></script>
+
+  <script src="js/custom.js"></script>
+  
+</body>
+</html>

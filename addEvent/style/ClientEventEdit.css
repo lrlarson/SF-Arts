@@ -1,0 +1,102 @@
+/* CSS file */
+@font-face
+{
+	fontWeight: medium;
+	fontStyle: medium;
+    src:url("/fonts/OmnesSem.ttf");
+    fontFamily: myOmnes;
+}
+
+Application{
+	font-family:Verdana;
+	font-size:11;
+}
+
+Label{
+	font-weight:bold;
+}
+.about{
+	paddingLeft: 10;
+	paddingRight: 10;
+	color: #808080;
+	fontFamily: Verdana;
+	font-weight:normal;
+	selectable:false;
+	fontSize: 12;
+}
+.title{
+	fontFamily: myOmnes;
+	fontWeight: normal;
+	fontSize: 14;
+}
+.entryBox{
+	horizontalGap: 0;
+	borderThickness: 3;
+	borderColor: #E6E6E6; 
+	borderStyle: solid;	
+	horizontalGap: 0;
+	verticalScrollPolicy: off;
+	horizontalScrollPollicy: off;
+}
+.promptingTxtInput
+{
+	prompt: Hello world;
+	borderStyle: solid;
+	borderColor: #4D4D4D;
+	width: 320;
+	height:100;
+}
+.popupTitle
+{
+	color: #B90248;
+	fontFamily: myOmnes;
+	fontWeight: normal;	
+	fontSize: 14;
+	
+}
+.popupText
+{
+	color: #808080;
+	fontFamily: Verdana;
+	fontSize: 12;
+	fontWeight: normal;
+}
+.popupWindow
+{
+	backgroundAlpha: 1;
+	backgroundColor: #FFFFFF;
+	borderColor: #B90248;
+	borderStyle: solid;
+	borderThickness: 4;
+}
+.warning
+{
+	color: #B90248;
+	fontSize: 10;
+	fontStyle: normal;
+	fontWeight: bold;
+	height: 18;
+}
+
+Alert{
+color : #124332;
+background-color: #ffffff;
+header-colors : #243322, #243322;
+header-height:19;
+drop-shadow-enabled: true;
+drop-shadow-color :#243322;
+corner-radius :6;
+border-style :solid;
+border-thickness: 1;
+border-color : #243322;
+footer-colors : #243322, #ffffff;
+title-style-name : "title";
+}
+
+.title{
+font-family :Verdana;
+font-size :10;
+font-weight :bold;
+color :#ffffff;
+}
+

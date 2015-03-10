@@ -1,0 +1,116 @@
+#inputtext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+TD {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666666;
+}
+.whatsnewdate {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #747474;
+}
+.whatsnewlink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #AF5A09;
+	text-decoration: none;
+}
+.whatsnewtext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #878787;
+}
+.bottomlinks {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #acac95;
+	text-decoration: none;
+}
+.bottomgray {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+}
+.descriptiontext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #666666;
+}
+.searchtext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #333333;
+}
+.smalltext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+}
+.titletext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #898853;
+}
+.subnavwhitelink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.smalllinkgreen {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #8A8015;
+	text-decoration: none;
+}
+:hover
+{
+    COLOR: #BF4943}
+}
+a {
+	color: #0066cc;
+}
+.tinyblack {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+}
+.noul {
+	text-decoration: none;
+	color: 0066cc;
+}
+.smalltextgray {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+}
+.returnheader {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #c99442;
+	font-weight: bold;
+}
+.EventTitle {
+	font-size: 12px;
+	color: #344eba;
+	font-weight: bold;
+}
+.smalltextlink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #0066cc;
+	text-decoration: none;
+}
+.TSHeadline {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #B87C17;
+}
+.TopTen {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000000;
+}

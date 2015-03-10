@@ -1,0 +1,38 @@
+<html>
+ <head>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script type="text/javascript" src="js/jquery.serializecfjson-0.2.js"></script>
+ <script type="text/javascript" src="js/main.js"></script>
+ <script type="text/javascript" src="js/Handlebars.js"></script>
+ </head>
+   <body>
+    The List of Shoes:
+    <ul class="shoesNav">
+    </ul>
+   <script id="shoe-template" type="x-handlebars-template">
+   {{#each allShoes}}
+   <li class="shoes">
+   <span class="shoe-name"> {{name}} - </span> price: {{price}}
+	{{> description}}
+   </li>
+    {{/each}}
+</script>
+<script id="shoe-description" type="x-handlebars-template">
+<ul>
+	<li>{{color}}</li>
+	<li>{{size}}</li>
+</ul>
+</script>
+The SFarts data:
+<ul class="sfartsData">
+</ul>
+<script id="sfartsTest-template" type="x-handlebars-template">
+   {{#each data}}
+   <li>
+   <span> {{discipline}} - </span> {{curatedby}}
+   </li>
+    {{/each}}
+</script>
+
+   </body>
+</html>

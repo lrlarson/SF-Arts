@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:og="http://opengraphprotocol.org/schema/">  
+  
+<head>
+  <meta charset="utf-8">
+  <title>SF/ARTS</title>
+  <!-- meta name="viewport" content="width=device-width, initial-scale=1.0" -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+  <!-- Loading Bootstrap -->
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Loading Flat UI -->
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  
+  <!-- Loading SF Icons -->
+  <link rel="stylesheet" href="fonts/fontello/css/sfarts_icons.css">
+  <link rel="stylesheet" href="fonts/fontello/css/animation.css">
+    
+  <!--[if IE 7]>
+    <link rel="stylesheet" href="fonts/fontello/sfarts_icons-ie7.css">
+  <![endif]-->    
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+  
+<body class="three-spot event">
+<div id="wrapper">
+  
+<div class="navbar main-menu">
+  <ul class="nav">
+    <li><a href="#" class="menu-menu sficon-menu" title="Menu"></a></li>
+    <li><a href="#/back" onClick="window.history.go(-1);return false;" class="menu-back sficon-left" title="Back"></a></li>
+    <li><a href="nearby.html" class="menu-location sficon-location" title="Nearby" ></a></li>
+    <li><a href="bookmarks.html" class="menu-bookmarks sficon-star" title="Bookmarks"></a></li>
+    <li><a href="#/search" class="menu-search sficon-search" title="Search"></a></li>
+  </ul>
+</div><!-- /navbar -->
+
+<div class="hide search-bar"><input id="global-search-bar" placeholder="Search..."  /><a id="global-search-submit">Press Enter</a></div>
+
+<div class="menu-bar">
+  <div class="relative">
+  <ul class="menu-list">
+    <li>
+        
+      <a href="#" class="menu-title">
+        <div class="button-wrap"><div href="#" class="btn btn-blend green action-close">Close</div></div>
+        Menu
+      </a>
+    </li>
+    <li><a href="home.html" class="">Home</a></li>
+    <li><a href="features.html" class="">Features</a></li>
+    <li><a href="calendar.html" class="">Calendar Highlights</a></li>
+    <li><a href="search.html#today" class="">Today's Events</a></li>
+    <li><a href="search.html#weekend" class="">This Weekend</a></li>
+    <li>
+      <a href="search.html#genre" class="">Search by Genre</a>
+      <div class="submenu">
+          <ul class="menu-list">
+            <li>
+                      
+              <a href="#" class="menu-title">
+                <div class="button-wrap"><div class="btn btn-blend blue action-apply">Apply</div></div>  
+                Select Genres
+              </a>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Children
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Dance
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Festivals
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Film/Video
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Galleries
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Literary Arts
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              More for Less
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Music
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Museums
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Public Arts
+              </label>
+            </li>
+            <li class="menu-pad">
+              <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+              Theater
+              </label>
+            </li>            
+          </ul>
+        </div>
+          
+    </li>
+    
+    
+    <li>
+      <a href="search.html#date" class="">Search by Date</a>
+      <div class="submenu">
+        <ul class="menu-list">
+          <li>       
+            <a href="#" class="menu-title">
+            <div class="button-wrap"><div class="btn btn-blend blue action-apply">Apply</div></div>
+              Select Dates
+            </a>
+          </li>
+          <li class="menu-pad"><input type="text" class="start-date datepicker" placeholder="Start Date (mm/dd/yyyy)"></li>
+          <li class="menu-pad"><input type="text" class="end-date datepicker" placeholder="End Date (mm/dd/yyyy)"></li>
+        </ul>  
+       </div>   
+    </li>
+    <li>
+      <a href="search.html#location" class="">Search by Location</a>
+      <div class="submenu">
+        <ul class="menu-list">
+          <li>
+            <a href="#" class="menu-title">
+              <div class="button-wrap"><div class="btn btn-blend blue action-apply">Apply</div></div>          
+              Neighborhoods
+            </a>
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Castro/Upper Market
+            </label>
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Chinatown
+            </label>
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Civic Center
+            </label>
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Embarcadero/Financial District
+            </label>
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Fisherman's Wharf
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Haight-Ashbury
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Golden Gate Park/Sunset
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Bayview/Candlestick Point
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Japantown/Fillmore
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Marina/Presidio
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Mission District
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Nob Hill
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            North Beach
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            SOMA/Yerba Buena
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            Union Square
+            </label>            
+          </li>
+          <li class="menu-pad">
+            <label for="checkbox1" class="checkbox">
+            <span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" data-toggle="checkbox" id="checkbox1" value="">
+            City Wide
+            </label>            
+          </li>          
+         </ul> 
+      </div>
+    </li>
+    <li>
+      <a href="about.html" class="">About</a>
+      <div class="submenu">
+        <ul class="menu-list">
+          <li><a href="/" class="">Overview</a></li>
+          <li><a href="features.html" class="">Submit Event</a></li>
+          <li><a href="calendar.html" class="">Feedback & Support</a></li>
+          <li><a href="calendar.html" class="">Sponsorship Opportunities</a></li>
+          <li><a href="calendar.html" class="">Terms of Use</a></li>
+          <li><a href="calendar.html" class="">Colophon</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  </div><!-- /relative -->
+</div><!-- /menu-bar -->
+<div class="hide submenu-bar"></div>
+
+
+
+<div id="bounds">
+  <div class="header">
+    <div class="button-wrap"><a href="#" class="sficon-remove"></a></div>
+    <div class="message"><a href="#">Get our Monthly Highlights via Email → </a></div>
+  </div>
+    
+  <div id="main-wrap">
+    <div class="inner-wrap scroll-pane overthrow">
+      <div id="top-left" class="spot scroll-pane overthrow">
+        <div class="spothead">
+          <div class="button-wrap"><div class="btn btn-blend secondary green action-toggle">More</div></div>  
+          <h3 class="title">Dance</h3>
+        </div><!-- /spothead -->
+        <div class="inner">  
+          <ul class="side-list">
+            <li><a href="#"><div class="detail title">re:framed, RAWdance’s 2013 Home Season</div><div class="detail date">Ongoing</div></a></li>        
+            <li><a href="#"><div class="detail title">Napoles Ballet: “Fausto”</div><div class="detail date">Through April 9</div></a></li>        
+            <li><a href="#"><div class="detail title">Alvin Ailey American Dance Theater</div><div class="detail date">April 8 &rarr; 10</div></a></li>        
+            <li><a href="#"><div class="detail title">Cross Current</div><div class="detail date">April 8</div></a></li>        
+            <li><a href="#"><div class="detail title">David Dorfman Dance</div><div class="detail date">April 1 &rarr; 15</div></a></li>        
+            <li><a href="#"><div class="detail title">Alonzo King LINES Ballet</div><div class="detail date">April 7, 10, 11 & 13</div></a></li>        
+            <li><a href="#"><div class="detail title">Marin Ballet</div><div class="detail date">April 13 &rarr; 15</div></a></li>        
+            <li><a href="#"><div class="detail title">Cuba Caribe</div><div class="detail date">April 16</div></a></li>        
+            <li><a href="#"><div class="detail title">FlowShow/San Francisco</div><div class="detail date">April 16, 17, 19</div></a></li>
+            <li><a href="#"><div class="detail title">re:framed, RAWdance’s 2013 Home Season</div><div class="detail date">Ongoing</div></a></li>        
+            <li><a href="#"><div class="detail title">Napoles Ballet: “Fausto”</div><div class="detail date">Through April 9</div></a></li>        
+            <li><a href="#"><div class="detail title">Alvin Ailey American Dance Theater</div><div class="detail date">April 8 &rarr; 10</div></a></li>        
+            <li><a href="#"><div class="detail title">Cross Current</div><div class="detail date">April 8</div></a></li>        
+            <li><a href="#"><div class="detail title">David Dorfman Dance</div><div class="detail date">April 1 &rarr; 15</div></a></li>        
+            <li><a href="#"><div class="detail title">Alonzo King LINES Ballet</div><div class="detail date">April 7, 10, 11 & 13</div></a></li>        
+            <li><a href="#"><div class="detail title">Marin Ballet</div><div class="detail date">April 13 &rarr; 15</div></a></li>        
+            <li><a href="#"><div class="detail title">Cuba Caribe</div><div class="detail date">April 16</div></a></li>        
+            <li><a href="#"><div class="detail title">FlowShow/San Francisco</div><div class="detail date">April 16, 17, 19</div></a></li>               
+          </ul>  
+        </div><!-- .inner -->  
+      </div><!-- /#top-left -->
+      <div class="middle-center-bottom-right overthrow">
+        <div id="middle-center" class="spot scroll-pane overthrow">
+          
+          <div class="spothead">
+            <div class="navbar actions">
+              <ul class="nav">
+                <li class="dropdown">
+                  <a href="#" class="sficon-facebook"></a>
+                </li>
+                <li><a href="#" class="sficon-twitter"></a></li>
+                <li class="#"><a href="#" class="sficon-paper-plane"></a></li>
+                <li><a href="#" class="sficon-calendar"></a></li>
+                <li><a href="#" class="sficon-star-empty"></a></li>
+              </ul>
+            </div><!-- /navbar -->
+            
+          </div><!-- /spothead -->
+  
+          <div class="inner">
+            <h2 class="title">re:framed, RAWdance’s 2013 Home Season</h2>          
+            <p>re:framed features three world premieres and one repertory work making its theatrical premiere. In the experimental new work, Double Exposure, Bay Area luminaries Joe Goode (Joe Goode Performance Group), KT Nelson (ODC), Ann Carlson (Stanford University) and Shinichi and Dana Iova-Koga (Inkboat) will each create a duet for Co-Artistic Directors Ryan T. Smith and Wendy Rein. Moody, theatrical new trio, Burn In, puts a contemporary twist on stark film noir lighting and Rorschach imagery. 66 Measures, a cheeky sextet, brings a burst of energy to the program. And The Beauty Project (2009), which premiered in a storefront at the Westfield San Francisco Centre mall, will be reimagined for the stage.</p>
+          </div><!-- /.inner -->
+        </div><!-- /#middle-center -->
+        
+        <div id="bottom-right" class="spot scroll-pane overthrow">
+          <div class="spothead">
+            <h5 class="title">Event Info</h5>
+          </div>
+          <div class="inner">
+        
+            <div class="info-box time">
+              Ends in 10 days:<br>
+              April 18 &rarr; May 10, 2013<br>
+              Tue-Sun 9:30 am-5:15 pm 
+            </div>
+            
+            <div class="info-box tickets">
+              $10 adults; $7 seniors; $6 ages 13-17; children 12 and under Free; free 1st Tue of the month
+            </div>
+            
+            <div class="info-box">
+              <div class="title">Legion of Honor</div>
+              <div class="address">34th Ave. and Clement, San Francisco 94121</div>
+              <div class="info">Info: 750-3600</div>
+              <div class="venue">Venue: 863-3330</div>
+            </div>
+            
+            <a href="#" class="btn btn-block btn-large">Website</a>
+            <a href="#" class="btn btn-block btn-large">Tickets</a>
+            <a href="#" class="btn btn-block btn-large">Map</a>
+          </div><!-- /.inner -->    
+        </div><!-- /#bottom-right -->
+      </div><!--/#middle-center-bottom-right -->
+      <div class="overlay"></div>
+    </div><!-- /.inner-wrap -->
+  </div><!-- /#main-wrap -->
+</div><!--/ #bounds -->
+
+</div><!-- /#wrapper -->
+
+
+  <!-- Load JS here for best performance -->
+  
+  <script type="text/javascript">
+      less = {
+          env: "development", // or "production"
+          dumpLineNumbers: "mediaquery"
+      };
+  </script>
+  
+  <script src="js/less.min.js"></script>
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/a130c1a8-90b4-49d3-b459-6e4ce45cea2e.js"></script>
+
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-select.js"></script>
+  <script src="js/bootstrap-switch.js"></script>
+  <script src="js/flatui-checkbox.js"></script>
+  <script src="js/flatui-radio.js"></script>
+  <script src="js/jquery.tagsinput.js"></script>
+  <script src="js/jquery.placeholder.js"></script>
+  <script src="js/jquery.stacktable.js"></script>
+  <script src="js/video.js"></script>
+
+  <script src="js/fixedfixed.min.js"></script>
+  <script src="js/overthrow.js"></script>
+  <script src="js/modernizr-latest.js"></script>
+  <script src="js/response.min.js"></script>
+
+  <script src="js/nicescroll/jquery.nicescroll.min.js"></script> 
+  <script src="js/waypoints.min.js"></script>  
+  <script src="js/masonry.min.js"></script>
+  <script src="js/jquery.cycle2.min.js"></script>
+  <script src="js/jquery.cycle2.swipe.min.js"></script>
+  <script src="js/cycle2-ios6fix.js"></script>
+  <script src="js/jquery.touchswipe.min.js"></script>
+  <script src="js/imagesloaded.min.js"></script>
+
+  <script src="js/custom.js"></script>
+  
+</body>
+</html>

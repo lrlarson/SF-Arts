@@ -1,0 +1,193 @@
+// Typography
+// --------------------------------------------------
+
+body {
+  color: @base;
+  font-family: @base-font-family;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  text-rendering: optimizelegibility;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: @base-font-family;
+  font-size: @base-font-size;
+}
+label {font-size: @base-font-size; color: #000;}
+
+a {
+  color: @link-color;
+  text-decoration: underline;
+  .transition(0.25s);
+  
+  &:hover {
+    color: @link-hover-color;
+    text-decoration: none;
+  }
+}
+
+b, strong {
+  font-family:'Avenir Next LT W01 Demi', 'Quattrocento Sans 700', Helvetica, sans-serif;
+}
+i, em {
+  font-family:'AvenirNextLTW01-Italic', 'Quattrocento Sans 400italic';
+}
+
+li { line-height: 20px; }
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight:normal;
+  font-family:'AvenirNextLTW01-Regular', 'Quattrocento Sans 400', Helvetica, sans-serif;
+}
+h1 {
+  font-size: @h1;
+  font-family:'Avenir Next LT W01 Bold','Quattrocento Sans 700', Helvetica, sans-serif;
+}
+h2 {
+  font-size: @h2;
+  font-family:'Avenir Next LT W01 Demi', 'Quattrocento Sans 700', Helvetica, sans-serif;
+}
+h3 {
+  font-size: @h3;
+  font-family:'Avenir Next LT W01 Demi',' Quattrocento Sans 700', Helvetica, sans-serif;
+}
+
+h4 {
+  font-size: @h4;
+  font-family:'Avenir Next LT W01 Demi', 'Quattrocento Sans 700', Helvetica, sans-serif;
+}
+
+h5 {
+  font-size: @h5;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-family:'AvenirNextLTW01-Medium','Quattrocento Sans 400', Helvetica, sans-serif;
+
+}
+h6 {
+  font-size: @h6;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+.inner p {
+  margin: 0 0 20px 0;
+  color: @slate;
+}
+
+blockquote {
+  color:@primary-blue;
+  font-size:@base-font-size * 1.176; /* 20px*/
+  border-left: solid @secondary-teal 5px;
+  padding-left:24px;
+}
+blockquote p {
+ margin:0;
+ padding:0;
+}
+blockquote footer {
+  font-family:'AvenirNextLTW01-Italic','Quattrocento Sans 400italic', Helvetica, sans-serif;
+  color:@slate;
+  background:none;
+}
+.caption {
+  color: @soft-blue;
+  font-size: @base-font-size * .8235; /* 14px */
+  line-height: @base-line-height * .72;  /* 18px */
+}
+.lead-text {
+  font-family:'Avenir Next LT W01 Demi','Quattrocento Sans 700', Helvetica, sans-serif;
+  font-size:@base-font-size * 1.411; /* 24px*/
+  line-height: @base-line-height * .9;  /* 28.8px */
+  color: #000 !important;
+}
+.pod .description,
+.event-body {
+  color:@slate;
+  font-size: @base-font-size; /* 14px */
+  line-height: @base-line-height * .9;  /* 20px */
+  text-rendering: optimizelegibility;
+}
+.pad .org, .pod .org {
+  font-size: 11px !important;
+  line-height: 18px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-family:'AvenirNextLTW01-Medium','Quattrocento Sans 400', Helvetica, sans-serif;
+  color: @slate;
+  padding: 4px 0 4px 0;
+}
+.submenu-bar,
+.menu-bar {
+  font-family:'Avenir Next LT W01 Demi','Quattrocento Sans 700', Helvetica, sans-serif;
+  color:@menu-bar-link;
+}
+.side-list a {
+  /*font-size:@base-font-size *.8823; /* 15px */
+  font-size: 16px;
+  color:@side-list-link;
+  font-family:'Avenir Next LT W01 Demi','Quattrocento Sans 700', Helvetica, sans-serif;
+}
+.side-list a:hover {
+  color:@hard-blue;
+}
+.side-list h4 {
+  font-size:@base-font-size *.7647; /* 13px */
+  text-transform:uppercase;
+}
+
+.side-list .title { padding-bottom: 4px; }
+
+.side-list .date {
+  font-family:'AvenirNextLTW01-Regular','Quattrocento Sans 400', Helvetica, sans-serif;
+  font-size:@base-font-size *.7647; /* 13px */
+}
+.side-list .detail {
+  line-height: 20px;
+}
+.side-list .org {
+  font-size: 10px;
+  line-height: 18px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-family:'AvenirNextLTW01-Medium','Quattrocento Sans 400', Helvetica, sans-serif;
+}
+
+
+// Fonts.com list. See /modules/type.less for typography
+/*
+font-family:'AvenirNextLTW01-UltraLi';
+font-family:'AvenirNextLTW01-UltraLt 721260';
+font-family:'Avenir Next W01 Thin';
+font-family:'AvenirNextW01-ThinItali';
+font-family:'Avenir Next W01 Light';
+font-family:'AvenirNextW01-LightItal';
+font-family:'AvenirNextLTW01-Regular';
+font-family:'AvenirNextLTW01-Italic';
+font-family:'AvenirNextLTW01-Medium';
+font-family:'AvenirNextLTW01-MediumI 721278';
+font-family:'Avenir Next LT W01 Demi';
+font-family:'AvenirNextLTW01-DemiIta';
+font-family:'Avenir Next LT W01 Bold';
+font-family:'AvenirNextLTW01-BoldIta';
+font-family:'AvenirNextLTW01-Heavy';
+font-family:'AvenirNextLTW01-HeavyIt 721290';
+font-family:'AvenirNextLTW01-UltraLt 721293';
+font-family:'AvenirNextLTW01-UltLtCn 721296';
+font-family:'AvenirNextLTW01-Condens 721299';
+font-family:'AvenirNextLTW01-Condens 721302';
+font-family:'AvenirNextLTW01-MediumC 721311';
+font-family:'AvenirNextLTW01-MediumC 721314';
+font-family:'AvenirNextLTW01-DemiCn';
+font-family:'AvenirNextLTW01-DemiCnI 721308';
+font-family:'AvenirNextLTW01-BoldCn';
+font-family:'AvenirNextLTW01-BoldCnI 721320';
+font-family:'AvenirNextLTW01-HeavyCn 721323';
+font-family:'AvenirNextLTW01-HeavyCn 721326';
+font-family:'Avenir Next W01 Cn Thin';
+font-family:'AvenirNextW01-CnThinIta';
+font-family:'AvenirNextW01-CnLight';
+font-family:'AvenirNextW01-CnLightIt';
+*/

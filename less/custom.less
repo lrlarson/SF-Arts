@@ -1,0 +1,1778 @@
+/* Mobile first styles default to 768 and below */
+/* Min width is 320px */
+
+/**
+ * General
+ */
+html {
+  background-color:@slint-blue;
+}
+html, body {
+  height: 100%;
+  overflow: auto;
+  overflow-x:hidden;
+  -webkit-overflow-scrolling: touch;  
+  padding:0;
+}
+
+
+
+/**
+ *  Navigation Toolbars
+ *  .main-menu has blue icons, .actions has social networking icons 
+ */
+.navbar  {
+  margin:0;
+  clear:both;
+}
+.nav {
+  list-style: none;
+}
+.navbar .nav {
+  position: relative;
+  left: 0;
+  display: block;
+  float: left;
+  margin: 0;
+  width:100%;
+  line-height:@header-size;
+}
+.navbar .nav > li {
+  float: left;
+}
+.navbar .nav > li > a {
+  display:block;
+  float: none;
+  padding: 0;
+  text-decoration: none;
+  text-shadow: none;
+  /**
+   * Careful when fiddling with icon size! Make sure to test responsive layouts.
+   */
+  padding: 16px 12px;
+  font-size:22.4px;
+  /*
+  padding: 8px 10.6px;
+  font-size:30px;
+  */
+}
+.navbar .nav > .active > a {
+  background-color: @navbar-hover;
+}
+
+/* Main-Menu */
+
+.navbar.main-menu {
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .3); 
+   box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .3);
+}  
+.navbar.main-menu .nav > li > a:hover {background:@navbar-hover;}
+.navbar.main-menu .nav { background:@main-theme-color; }
+.navbar.main-menu .nav li a {color:@inverse;}
+
+/* Actions */
+.navbar.actions li a {
+  padding:0 12px;
+  border-right:solid 1px @slint-blue;
+  color:@soft-blue;
+  line-height:@header-size;
+}
+.navbar.actions a.sficon-facebook:hover { color:@facebook; }
+.navbar.actions a.sficon-twitter:hover { color:@twitter; }
+.navbar.actions a.sficon-paper-plane:hover { color:@paper-plane; }
+.navbar.actions a.sficon-calendar:hover { color:@calendar; }
+.navbar.actions a.sficon-star,
+.navbar.actions a.sficon-star-empty:hover { color:@favorite; }
+
+/* Using respond.js to adjust action button padding...a little smoother than media queries */
+.small .navbar li a {
+  padding-left: 1.24em;
+  padding-right: 1.24em;
+}
+.medium-small .navbar.actions li a {
+  padding: 0 1.64em;
+}
+.medium .navbar.actions li a {
+  padding: 0 1.10em;
+}
+.medium-large .navbar.actions li a {
+  padding: 0 2.46em;
+}
+.large .navbar.actions li a {
+  padding: 0 1.45em;
+}
+
+.tooltip {
+  display:none !important;
+}
+
+/**
+ * Global search bar
+ */
+
+
+.search-bar {
+  background:@primary-green;
+  color:@inverse;
+  input {   
+    border:0; padding:0; margin:0; background:0; border-radius:0;
+    color:@inverse;
+    font-size:@base-font-size;
+    padding:0 0 0 10px;
+    height:@header-size;
+    vertical-align:middle;
+    width:50%;
+    .placeholder-color(#FCFCFC);
+    outline:none;
+  }
+}
+#global-search-submit {
+  font-size:@base-font-size * 10/17;
+  border:solid 1px #FFF;
+  border-radius:6px;
+  padding:0;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:#FFF;
+  float:right;
+  margin-top:18px;
+  margin-right:8px;
+  padding:3px 10px;
+  text-align:center;
+  cursor:pointer;
+}
+
+
+/**
+ * Pop-out Menu Styles
+ * 
+ * ul.menu-list is for main menu pop-out
+ * ul.side-list is for sidebar list, i.e. on the About page.
+ */
+.menu-bar {
+  clear:both;
+  display:none; /* keep menu closed initially*/
+  width:100%;
+  background:@top-left-bg;
+  border-right:solid 1px @soft-blue;
+}
+.menu-bar .submenu {
+  display:none; /* hide submenus by default */
+  background:#fff;
+}
+ul.side-list,
+ul.menu-list {
+  margin:0;
+  padding:0;
+  display:block;
+}
+
+ul.side-list li,
+ul.menu-list li {
+  display:block;
+  border-bottom:solid 1px @slint-blue;
+  padding:0;
+  margin:0;
+}
+
+ul.side-list li:last-child,
+ul.menu-list li:last-child {
+  border-bottom: 1px solid @slint-blue;
+}
+
+ul.side-list li a,
+ul.side-list li h4,
+ul.menu-list li.menu-pad,
+ul.menu-list li a {
+  display:block;
+  text-decoration:none;
+  line-height:@header-size;
+  padding:0 @global-padding;
+  margin:0;
+}
+ul.menu-list li.menu-pad label {
+  display:inline;
+  color:@slate;
+  &.checked {
+    color:#000;
+  }
+}
+ul.menu-list li.menu-pad, .submenu-bar ul.menu-list { background-color: @top-left-bg; }
+
+ul.menu-list li.menu-pad.highlight,
+ul.menu-list li.menu-pad:active,
+ul.menu-list li.menu-pad:hover, 
+ul.menu-list li.menu-pad:focus,
+.submenu-bar ul.menu-list a:active,
+.submenu-bar ul.menu-list a:hover,
+.submenu-bar ul.menu-list a:focus,
+{ 
+  background-color: white; 
+} 
+
+.submenu ul.side-list li a,
+.submenu ul.side-list li h4,
+.submenu ul.menu-list li a {
+  padding:0 @global-padding*2;
+}
+.submenu-bar input,
+.menu-bar input {
+  margin-bottom:0;
+  font-size:15px;
+}
+
+ul.menu-list .button-wrap {
+  margin:0;
+  margin-top:-2px;
+}
+
+.submenu-bar ul.menu-list li a.menu-title,
+.menu-bar .submenu .menu-title {
+  background:@secondary-blue;
+}
+ul.side-list li a {
+  padding:@global-padding/1.3 @global-padding/2;
+}
+ul.menu-list li a {
+  color:#000;
+}
+
+ul.side-list li a:hover,
+ul.menu-list li a.active,
+ul.menu-list li a:hover {
+  background-color:@inverse;
+  color:@hard-blue;
+}
+
+.side-list-selected {
+  background-color:@inverse;
+  color:@hard-blue;
+}
+
+ul.menu-list li a.menu-title {
+  background:@secondary-blue;
+  color:@inverse;
+  text-transform:uppercase;
+}
+ul.side-list,
+ul.side-list li,
+ul.side-list ul,
+ul.side-list ul li {
+  list-style:none;
+  margin:0;
+  padding:0;
+  text-indent:0;
+  text-align:center;
+}
+/* Side List Title Color */
+ul.side-list h4,
+.about ul.side-list h4,
+.event ul.side-list h4 {
+  padding:0;
+  margin:0;
+  text-align:center;
+  background:@inverse;
+  color:@primary-green;
+  border-bottom:solid 2px @primary-green;   
+}
+.feature ul.side-list h4 {
+  color:@primary-orange;
+  border-bottom:solid 2px @primary-orange; 
+  border-top: none; 
+  letter-spacing: .1em;
+}
+
+/* Overlay is triggered when main-menu pops out */
+
+#wrapper, #bounds {min-height:100%;}
+.overlay {
+  opacity:.8;
+  height:100%;
+  width:100%;
+  background:#000 @stripe;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  z-index:900;
+}
+
+/**
+ * Fixed Header region for messages, search filters, etc
+ *
+ * body.with-header class triggers display
+ */
+.with-header .header {
+  display:block;
+}
+
+.header {
+  padding: 6px @global-padding;
+  background:@secondary-theme-color;
+  color:@inverse;
+  clear:both; 
+  font-size:@base-font-size * .8;
+  display:none;
+  max-height:@header-size;
+  z-index: 800;
+}
+
+.search .header {
+  background:#FFF url(../images/search-stripe.png);
+}
+.search-wrap .button-wrap .btn {
+  background:@primary-green;
+  margin-top:-1px;
+}
+.search-wrap .button-wrap .btn:hover {
+	background:@secondary-green;
+}
+/*
+.navhead,
+.navhead a,*/
+.header a {
+  color: @inverse;
+  text-decoration:none;
+}
+
+.header .message {
+  white-space:nowrap;
+}
+.header h3.title {
+  margin:0;
+  padding:0;
+}
+
+
+
+/**
+ * Responsive layout.
+ *
+ *  Mobile first means default styles are for screen widths <= 320px.
+ *  Media Queries handle wider screen scenarios > 320px.
+ *  
+ *  CSS Id names are in dual [mobile-tablet] namespace pattern, 
+ *  i.e. #top-left, #middle-center, #bottom-right
+ *  showing where the element would appear in that mode.
+ * 
+ */
+#main-wrap {
+  position:relative;
+  clear:both;
+}
+#top-left,
+#middle-center,
+#bottom-right {
+  background:#fff;
+}
+#top-left {
+  background: @top-left-bg;
+}
+#bottom-right {
+  background: @stripe;
+}
+#top-left .inner {
+  display:none; /* hidden on mobile, opens up on wider screens */
+  position:relative;
+}
+#middle-center .inner,
+#bottom-right .inner {
+  padding:@global-padding;
+}
+
+
+/* One column only (top-left and bottom-right are empty) */
+.one-spot #top-left,
+.one-spot #bottom-right {
+  display:none; /* We display none on the div, making the assumption that the divs are empty (they *should* be empty!) */
+}
+
+/* Two Columns Only (bottom-right is empty)*/
+.two-spot #bottom-right {
+  display:none;
+}
+
+/* Three Column defined below in media queries */
+
+/* This creates an inner scroll for single column layouts (buggy atm)*/
+.inner-wrap {
+/*
+  min-height:100%;
+  max-height:100%;
+  overflow:auto;
+  -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
+  */
+}
+
+
+/**
+ * Spothead is the title/header for each spot region.
+ */
+.spothead {
+  height:@header-size;
+  line-height:@header-size;
+  width:100%;
+  border-bottom: 1px solid @slint-blue;
+}
+
+/* BG colors*/
+#top-left .spothead, .about #top-left .spothead, .event #top-left .spothead, .about #top-left .spothead { background: @secondary-theme-color;}
+.feature #top-left .spothead { background: @primary-orange;}
+#middle-center .spothead { background:#FFF; width:100%;}
+#bottom-right .spothead { background:@secondary-theme-color;}
+
+.spot h2.title,
+.spothead .title {
+  line-height:@header-size;
+  padding:0 @global-padding;
+  margin:0;
+}
+.spothead .button-wrap {
+  margin-right:@global-padding;
+  margin-top:-1px;
+}
+#top-left h3.title {
+  color:@inverse;
+}
+#middle-center h2.title {
+  padding:0;
+  margin:.5em 0 .3em;
+  text-align: center;
+}
+#middle-center .inner h5 { text-align: center; padding-bottom: .5em; text-transform: uppercase; color: @hard-blue;}
+
+#bottom-right h5.title {
+  background: @secondary-blue;
+  color:@inverse;
+  line-height:@header-size;
+  text-align: center;
+}
+
+
+/**
+ * Feature Page
+ */
+.feature .inner, .event .inner {
+  max-width:600px;
+  margin:0 auto;
+}
+.feature-cover {
+  background: #000;
+  position:relative;
+  img {max-width:100%; margin:0 auto; text-align:center;}
+  overflow:hidden;
+  text-align:center;
+  max-height:600px; /* avoid pictures pushing down fold too far*/
+}
+.fade-overlay {
+  position:absolute;
+  bottom:0;
+  text-align:center;
+  padding:0 10% 5% 10%;
+  margin:0 auto;
+  .vertical-gradient(rgba(0,0,0,0), rgba(0,0,0,0.65));
+  .title, .author {color:@inverse; }
+}
+/* Should really be using media queries here, but this is smoother */
+.large .fade-overlay .title { font-size:@h1; line-height:@base-font-size * 2.352; }
+.medium .fade-overlay .title { font-size:@h1 * .9; line-height: @base-line-height * .8;}
+.fade-overlay .title { font-size:@h1 * .7; line-height:1.25em;}
+.large .fade-overlay {
+  padding:0 20% 10% 20%;
+}
+/**
+ * Home Page
+ */
+
+/**
+ * See js/custom.js as slider height is set with javascript for wider screens
+ */
+.slideshow { max-width:100%; overflow:hidden; }
+.slide-max-height { max-height:320px; }
+.slide {
+  text-align:center;
+  width:100%;
+  background-color: white;
+  background-repeat:no-repeat;
+  background-position:center center;
+  max-height:320px;
+  
+  /* Speed up laggy BG covers */
+  transform: translate3d(0,0,0);  
+  -webkit-transform: translate3d(0,0,0);
+  
+  /* A little redundant, but just to be safe... */
+  -webkit-background-size: 100%; 
+  -moz-background-size: 100%; 
+  -o-background-size: 100%; 
+  background-size: 100%; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
+  background-size: cover;   
+}  
+body.home .fade-overlay {
+  position:absolute;
+  bottom:0;
+  text-align:center;
+  padding:0;
+  padding:0 10% 10% 10%;
+  margin:0 auto;
+  width:auto;
+  .vertical-gradient(rgba(0,0,0,0), rgba(0,0,0,0.65));
+  .title, .author {color:@inverse; }
+}
+
+
+/* Slideshow Top */
+.slideshow-top {
+  text-align: center; width: 100%; z-index: 500; position: absolute; top: 10px; overflow: hidden;
+}
+.slideshow-top h5 {
+  letter-spacing:4px;
+  font-size:@base-font-size * 14/17;
+  text-transform:uppercase;
+  margin-top:1em;
+}
+.slideshow-top h5.type { color:@inverse; }
+.slideshow-top h5.author { font-size:@base-font-size * 11/17; }
+.sfarts-logo { display:none; /* Hide by default */ }
+.sfarts-logo img { max-width:100%; }
+
+/* Pager */
+.cycle-pager { 
+    text-align: center; width: 100%; z-index: 500; position: absolute; bottom: 20px; overflow: hidden; height:50px;
+}
+.cycle-pager span {   
+    font-family: impact; font-size: 40px; 
+    display: inline-block;
+    /*color: #252523;*/
+    color: #FFF;
+    opacity:.25;
+    cursor: pointer;
+    padding:0 2px; 
+    line-height:50px;
+}
+.cycle-pager span.cycle-pager-active { color: @primary-orange; opacity:1;}
+.cycle-pager > * { cursor: pointer;}
+
+/* Should really be using media queries here, but this is smoother */
+
+.home h1.title a { color:@inverse; text-decoration:none; }
+.home.large .fade-overlay .title,
+.home.medium .fade-overlay .title,
+.home.medium-small .fade-overlay .title { font-size:@h1; line-height:@base-font-size * 2.352;}
+/*.home.medium .fade-overlay .title { font-size:@h1*.8; line-height: @base-line-height * .8; }*/
+.home.fade-overlay .title { font-size:@h1 * .6; line-height:1.25em; }
+
+.home #middle-center {
+  background:@light-blue-slate;  
+}
+.highlights {
+  text-align:center;
+  height:100%;
+}
+.highlights > h5 {
+  color:@inverse;
+  background:@calendar-highlights;
+  margin:0;
+  padding:0;
+  line-height:@header-size;
+}
+.highlights .categories {
+  background:@blue-slate;
+  padding-bottom:@global-padding/2;
+  select { margin:0; font-size:@base-font-size * 14/17;}
+  h5 {
+    background:@calendar-highlights; line-height: @header-size; color:@inverse; margin-top:0;
+    a { color:@inverse; text-decoration:none; }
+  }
+}
+
+
+/**
+ * Bookmarks & Nearby
+ */
+.bookmarks #middle-center .spothead { background-color:@secondary-blue;}
+.search #middle-center,
+.nearby #middle-center,
+.bookmarks #middle-center { background: @slint-blue;}
+
+/**
+ * Search page
+ */
+.search .header { padding:10px @global-padding; border-bottom: 1px solid @slint-blue; }
+.search .header input.search-box {
+  width:100%;
+  color:@hard-blue;
+  font-family:'Avenir Next LT W01 Demi';
+  border: 1px solid transparent;
+  margin:0;
+  .placeholder-color(@light-slate);
+}
+.search .header input.search-box:hover {
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow:    0 2px 2px rgba(0, 0, 0, 0.05);
+	box-shadow:         0 2px 2px rgba(0, 0, 0, 0.05);
+	.transition(0.25s);
+}
+
+.search input.search-box:focus { border: 1px solid @primary-green; }
+
+.search-box-squeeze { position:relative;}
+.search-box-squeeze .clear-search {
+  position:absolute;
+  top:5px;
+  right:0px;
+  display:block;
+  color: rgba(0, 0, 0, 0.07);
+  font-size:@base-font-size * 1.15; /*20px*/
+  z-index:1; /* Fixes bug where this element disappears on Webkit */
+}
+.search-box-squeeze .results { display:none; }
+.show-result-count input.search-box {}
+
+.search-wrap .sficon-remove:active,
+.search-wrap .sficon-remove:hover,
+.search-wrap .sficon-remove:focus { color: rgba(0, 0, 0, 0.30); .transition(0.25s);}
+
+.search #middle-center .spothead {
+  padding:0;
+  height:auto;
+  background:#fff @stripe;
+  line-height:normal;
+  overflow:auto;
+}
+
+.view-mode {display:none;}
+.search-filter-wrap { display:none;} /* By default hide this and use filter toggle*/
+.medium .view-mode,
+.large .view-mode {
+  display:block !important;
+}
+.search-box-squeeze {margin-right:100px;}
+/*
+ .medium .search-box-squeeze,
+.large .search-box-squeeze {margin-right:0; }
+*/
+
+.search-filter {
+  border-bottom:solid 1px @slint-blue;
+  text-align:left;
+  padding:@global-padding/4 @global-padding;
+}
+.search-filter.active { background:@secondary-blue;}
+.search-filter.active h5.title { color:@inverse; text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.30);}
+.search-filter h5.title { 
+	font-family:'Avenir Next LT W01 Demi'; 
+	text-align:left; 
+	margin:0;
+	padding:0; 
+	line-height:2.6em; 
+	color:@hard-blue; 
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+}
+.search-filter select { width:100%;  border:none; font-size:(@base-font-size * 13/16); }
+.search-filter .button-wrap { margin:0; margin-top:2px; display:none; }
+.search-filter.active .button-wrap { display:block;}
+.search-filter .sficon-remove { text-decoration:none; cursor:hand; color: rgba(0, 0, 0, 0.2);}
+.search-filter .sficon-remove:hover { color: rgba(0, 0, 0, 0.4); }
+
+
+
+
+/**
+ * Pod Views
+ */
+ul.pods,
+ul.pods li {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.pod a.link {
+  display:block;
+  padding:@global-padding;
+  background:#FFFFFF;
+  border-radius: 6px;
+  /* float:left */
+  margin-right:@global-padding/2;
+  margin-bottom:@global-padding/2;
+  position:relative;
+}
+/* Bugfix for Android, pods seem to go outside their bounds */
+.smallest.home a.link,
+.small.home a.link {
+  position:static;
+}
+.pod a { text-decoration:none;   	
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
+	-moz-box-shadow:    0 2px 2px rgba(0, 0, 0, 0.07);
+	box-shadow:         0 2px 2px rgba(0, 0, 0, 0.07); 
+}
+.pod a.link:hover {
+	background:@pod-hover;
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0);
+	-moz-box-shadow:    0 2px 2px rgba(0, 0, 0, 0);
+	box-shadow:         0 2px 2px rgba(0, 0, 0, 0);
+	.transition(0.25s);
+}
+.pods.small-view .pod a.link { /* width 300px */  }
+
+.pods.list-view img.pod-img,
+.pods.small-view img.pod-img {
+  width:75px;
+  height:75px;
+  border-radius:50%;
+  float:right;
+}
+.pods.list-view a.link { position:relative; }
+.pods.list-view img.pod-img {
+  position:absolute;
+  right:20px;
+  bottom:20px;
+}
+/* Small View */
+.pods.small-view a.link {
+  min-height:120px;
+  overflow: hidden;
+}
+.pods.small-view .description,
+.pods.small-view .distance { display:none; }
+.nearby .pods.small-view .distance { display: block;}
+.pods.small-view h4 {
+  color: #000;
+  font-size:@base-font-size * .882; /*15px*/
+  margin:0;
+}
+
+.pods.small-view .detail { font-size:@base-font-size * .765; /*13px*/}
+.pods.small-view .type { color: #999;}
+.pods.small-view .distance { color:@distance; float: left; height:100%; width: 40px; }
+.pods.small-view .distance .number {font-family:'AvenirNextLTW01-DemiCn';font-size: @base-font-size * 1.1; /*20px */}
+.pods.small-view .distance .miles {font-family:'AvenirNextLTW01-MediumC 721311'; font-size: @base-font-size * .7647; /*13px */}
+.nearby .pods.small-view .title,
+.nearby .pods.small-view .time,
+.nearby .pods.small-view .type { margin-left: 60px;}
+.pods.small-view .distance .number { margin-left: 0; }
+.pods .button-wrap {
+  position:absolute;
+  top:0px;
+  right:2px;
+  text-align:center;
+}
+.pods .button-wrap.action-remove { display:none;}
+.pods .button-wrap.action-remove .btn {
+  padding:0px;
+  color:#DE3626;  
+  font-size:22px;  
+  text-align:center;
+  background:transparent;
+  border-radius:100%;
+}
+
+/* List View */
+.pods.list-view a.link {
+  min-height:180px;
+}
+.pods.list-view h4 {
+  color: #000000;
+  width: 200px;
+  margin:0;
+}
+
+.pods.list-view .time,
+.pods.list-view .tickets,
+.pods.list-view .image {
+  display:none;
+}
+/* Show pod-img below on small screens */
+.small .pods.list-view .image,
+.smallest .pods.list-view .image {
+  display:block;
+  img.pod-img {
+    position:static;
+    float:none;
+    margin:0 auto;
+    display:block;
+    width:75px;
+  }
+}
+
+.pods.list-view .detail { 
+  font-size:@base-font-size * 14/17; /*14px*/
+  margin-bottom: 15px;
+}
+
+
+/* Grid View */
+#fit-width .masonry {
+  margin: 0 auto;
+}
+.pods.grid-view .pod a.link {
+  padding:0;
+  width:220px;
+  border-radius:3px;
+  text-align:center;
+  margin:10px;
+}
+.gutter-size {
+  width:10px; /* used by masonry js*/
+}
+.pods.grid-view .image img {
+  border-radius:3px;
+  max-width:100%;
+}
+.small .pods.grid-view img.pod-img,
+.smallest .pods.grid-view img.pod-img {
+  width:75px;
+  height:75px;
+  border-radius:50%;
+  margin-top:@global-padding;
+}
+.small .pods.grid-view a.link,
+.smallest .pods.grid-view a.link {
+  width:auto;
+}
+.pods.grid-view h4 {
+  color:#000;
+  margin-bottom:  0;
+}
+.pods.grid-view .pad { padding-top:25px;}
+.pods.grid-view .image + .pad {
+  padding-top:0px;
+}
+.pods.grid-view .description {
+  padding-top:25px;
+}
+.pods.grid-view .image + .pad .description {
+ padding-top:0;
+}
+
+.pods.grid-view .detail {
+  font-size:@base-font-size * 14/17;
+}
+.pods.grid-view .detail .date {
+  margin: 0 0 22px 0;
+}
+.pods.grid-view {
+  margin:0 auto;
+}
+
+/**
+ * Misc styles
+ */
+.pad {
+  padding-top: 0;
+  padding-left: @global-padding;
+  padding-right: @global-padding;
+  padding-bottom: @global-padding;
+}
+.pad-half {
+  padding:@global-padding/2;
+}
+.nicescroll-rails {
+  z-index:900;
+}
+.nicescroll-rails div {
+  cursor:pointer;
+}
+.fixed-supported .sticky {
+  position:fixed;
+  width:@column-width - @global-padding * 2;
+  top:@header-size;
+}
+.error {
+  text-align:center;
+  padding:3em;
+  color:#666;
+}
+.hide {
+  display:none;
+}
+.relative {
+  position:relative;
+}
+.static {
+  position:static;
+}
+.underline { text-decoration:underline;}
+
+.read-more {
+  display:block;
+  background:@primary-green;
+  color:@inverse;
+  text-align:center;
+  margin-top:@global-padding;
+  padding:@global-padding;
+  font-size: @base-font-size * 14/17;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  text-decoration:none;
+}
+.read-more:hover { background:@secondary-green; color: white; }
+.with-header .read-more {
+  /* get the read-more button to stick to the bottom of the page*/
+  margin:@global-padding -@global-padding -@global-padding;
+  text-align:center;
+}
+
+#loader {
+  z-index:2000;
+  position:absolute;
+  top:0px;
+  left:0px;
+  height:100%;
+  width:100%;
+  background: @primary-blue @stripe;
+  /*pointer-events: none;*/ /* allows clicks to go through*/
+}
+#loader.with-alpha {
+  opacity:.8;
+}
+.loader-title-page #loader {
+  background:@primary-blue;
+}
+#loader .vjs-loading-spinner {
+  display:block;
+}
+#loader .load-alt {
+
+}
+#loader .load-title {
+  margin:0 auto;
+  width:100%;
+  height:100%;
+  background:url(../images/sf-loader.svg) no-repeat center center;
+  background-size:contain;
+}
+
+/* Hide highlights browse-top for smaller widths */
+.medium .browse-top,
+.smallest .browse-top,
+.small .browse-top {
+  display:none !important;
+}
+input.datepicker[readonly] {
+  color:#000;
+}
+
+
+/**************************************************************
+ *
+ * MEDIA QUERIES (Keep these at the very bottom of stylesheet)
+ * 
+ **************************************************************/
+
+/**
+ * Small Tablet & Desktop Media Query
+ *
+ * This query switches the navigation to be vertical on the left side of the page,
+ * otherwise it is pretty similar to the default mobile styles.
+ *
+ * body.small class added with response.js
+ */
+@media only screen and (min-width: 600px) {
+  
+  /* To make fixed heights work, need to propogate height:100% for all elements */
+  html, body {min-height:100%; padding:0; margin:0; overflow:hidden; -webkit-overflow-scrolling: touch;}
+  #wrapper {padding:0px 0; position:absolute; top:0; bottom:0; left:0; right:0;}
+  #bounds, #main-wrap, .inner-wrap, .middle-center-bottom-right {
+    height:100%;
+    -webkit-overflow-scrolling: touch;
+  }
+  .relative {position:relative;}
+  #bounds {
+    margin-left:@header-size;
+  }
+  .with-header #wrapper {
+   padding-top:@header-size;
+  }
+  .with-header .header {
+   margin-top:-@header-size;
+  }
+  .with-header .read-more {
+    margin-bottom:@header-size;
+  }
+  .inner-wrap {
+    min-height:100%;
+    max-height:100%;
+    overflow:auto;
+    overflow-x:hidden; 
+    -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
+  }
+  /* .overthrow-enabled triggers the overthrow.js script to fix buggy browsers, see: http://filamentgroup.github.io/Overthrow/#wat */
+  .overthrow-enabled .inner-wrap.overflow {
+    overflow:auto;
+    overflow-x:hidden; 
+    -webkit-overflow-scrolling: touch;
+  }
+  
+
+  
+  /* Make the main-menu navigation vertical */
+  .navbar.main-menu {
+    position:absolute;
+    left:0px;
+    top:0px;
+    height:100%;
+    background:@main-theme-color url('../images/sfarts-icon.svg') no-repeat 50% 93%; 
+    background-size:18px 180px; /* w/h = .1 ratio */
+    width:@header-size;
+  }
+  /* Bugfix as with-header class will push logo too far down.*/
+  .with-header .navbar.main-menu {
+    background-position: 50% 83%;   
+  }
+  .navbar.main-menu .nav {
+    height:auto;
+  }
+  .navbar.main-menu .nav > li {
+    float:none;
+  }
+  .navbar.main-menu {z-index:1500;}
+  .menu-bar {
+    margin:0;
+    padding:0;
+    position:absolute;
+    height:100%;
+    width:@column-width;
+    left:@header-size;
+    top:0px;
+    z-index:1000;
+    border-right:solid 1px @slint-blue;
+    overflow:visible;
+  }
+  /* We have to use the empty absolute positioned submenu-bar for submenus
+  to fix iPad/Tablet bug. See custom.js which does an html replacement on it.
+  */
+  .submenu-bar,
+  .menu-bar .submenu {
+    margin:0;
+    padding:0;
+    position:absolute;
+    height:100%;
+    width:@column-width*1.5;
+    left:@column-width + 1;
+    top:0px;
+    z-index:1000;
+    background:#FFF;
+  }
+  .submenu-bar {
+    left:@column-width + @header-size + 1;
+  }
+  .submenu ul.side-list li a,
+  .submenu ul.side-list li h4,
+  .submenu ul.menu-list li a {
+    padding:0 @global-padding*2;
+  }
+  
+  .submenu-bar ul.menu-list,
+  .menu-bar ul.menu-list {
+    min-height:100%;
+    max-height:100%;
+    overflow:auto;
+    overflow-x:hidden; 
+    -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling   
+  }
+  .menu-bar ul.menu-list li {
+    /*border:solid 1px @soft-blue;*/
+  }
+
+  /* CSS Caret (triangle thing) */
+  .search-bar:before,
+  .menu-bar > ul.menu-list:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    top: 50%;
+    left: 0px;
+    margin-top: -10px;
+    margin-left:-5px;
+    border-right-color: @primary-green;
+    border-width: 10px 10px 10px 0;
+  }
+  /* Show the search result count since we have more room */
+  .show-result-count .results { display:block;font-family:'Avenir Next LT W01 Bold'; font-size:@base-font-size *.8; /* 12px */ text-transform:uppercase; color:@primary-green; margin-top: -2px; }
+  
+  /* Pod Views */
+  .pods.list-view a.link {
+    overflow:auto;
+    min-height:200px;
+  }
+  .pods.list-view .split {
+    width:48%;
+    float:left;
+  }
+  .pods.grid-view .pod a.link  {
+    width:220px;
+    margin:@global-padding/4;
+  }
+  .grid-view-sizer {
+    width:220px;
+  }
+  
+    /* Slideshow */
+  .slideshow { max-width:100%;margin:0 auto;}
+  .slide {
+    min-height:100%;
+    max-height:100%;
+    position:absolute;
+    max-width:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+  }
+  .slideshow-top h5 {margin-bottom:-1em;}
+  .sfarts-logo { display:block;}
+  
+  /**
+   * Search
+   */
+  .search-wrap .results { display:block; position:absolute; right:20px; top:30%; width: 110px; }
+
+  .search-bar {
+    position:absolute;
+    left:@header-size;
+    top:(@header-size * 4) - 2;
+    height:@header-size;
+    background:@primary-green;
+    width:100%;
+    color:@inverse;
+    z-index:1100;
+    input {   
+      border:0; padding:0; margin:0; background:0; border-radius:0;
+      color:@inverse;
+      font-size:@base-font-size * 20/17;
+      font-family:'Avenir Next LT W01 Demi';
+      padding:0;
+      width:60%;
+      float:left;
+      margin-left:@header-size/2;
+      height:@header-size;
+      vertical-align:middle;
+      .placeholder-color(#FCFCFC);
+    }
+  }
+  #global-search-submit {
+    font-size:@base-font-size * 11/17;
+    font-weight: 500;
+    border:solid 1px #FFF;
+    border-radius:6px;
+    padding:0;
+    width:100px;
+    text-transform:uppercase;
+    float:right;
+    margin-top: 18px;
+    margin-right:@header-size + 10;
+    text-decoration:none;
+    color:#FFF;
+    padding:3px 10px;
+    text-align:center;
+    /* added letter spacing*/
+    letter-spacing: 1px;
+  }
+  .tooltip {
+    color:@inverse;
+    display:block !important;
+  }
+  .tooltip .tooltip-inner {
+    border-radius:0;
+    background-color:@primary-green;
+    line-height:@header-size;
+    padding-top:0;
+    padding-bottom:0;
+    text-align:center;
+    width:90px;
+    overflow:hidden;
+  }
+  .tooltip.right {
+    margin-left:-5px;
+  }
+  .tooltip.right .tooltip-arrow {
+    top: 50%;
+    left: 0;
+    border-right-color: @primary-green;
+    border-width: 10px 10px 10px 0;
+  }
+  
+  .fixed-supported .three-spot #middle-center .inner {
+    max-width:600px;
+    margin:0 auto;
+  }
+
+
+}
+
+
+
+/**
+ * Medium size Tablet & Desktop Media Query
+ *
+ * This query opens up the #top-left spot region. Bottom-right falls below
+ * middle-center. Essentially if all spot regions are open, will always look
+ * like a two column layout.
+ *
+ * body.medium class added by response.js
+ */
+@media only screen and (min-width: 720px) and (max-width:1023px) {
+
+  /* Show the left content */
+  #top-left .inner {
+    display:block !important;
+  }
+  #top-left .spothead .button-wrap {
+    display:none;
+  }
+  
+  .inner-wrap {
+    height:100%;
+    overflow:visible;
+  }
+  .one-spot #middle-center {
+    min-height:100%;
+    max-height:100%;	
+    overflow:auto;
+    overflow-x:hidden; 
+    -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling  
+  }  
+  
+  .two-spot #top-left,
+  .three-spot #top-left {
+    width: @column-width;
+    position:absolute;
+    left:0px;
+    top:0px;
+    min-height:100%;
+    max-height:100%;
+    overflow:auto;
+    overflow-x:hidden;  
+    -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
+  }
+  /**
+   * What the what? Why a .middle-center-bottom-right wrapper?
+   *
+   * ANSWER: Because we need a wrapper class to enable overflow touch scrolling
+   * and to make this a fixed height region. Otherwise overflow would trigger regular
+   * body scrollbars and that would lead to unpredictable behavior. This would
+   * be much easier if position:fixed were more reliable across browsers and we
+   * could just rely on that.
+   * 
+  */
+  .two-spot .middle-center-bottom-right,
+  .three-spot .middle-center-bottom-right {
+    border-left:solid 1px @slint-blue;
+    margin-left:@column-width;
+    overflow:auto;
+    overflow-x:hidden;   
+    -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
+  }
+  .overthrow-enabled .one-spot #middle-center.overflow,
+  .overthrow-enabled #top-left.overflow,
+  .overthrow-enabled .middle-center-bottom-right.overflow {
+    overflow:auto;
+    overflow-x:hidden;   
+    -webkit-overflow-scrolling: touch;
+    /*outline:transparent dotted thin;*/
+  }
+  
+  /**
+   * Affix the spot headers when possible.
+   *
+   * Using fixedfixed.js detection script [https://github.com/filamentgroup/fixed-fixed]
+   * to add html.fixed-support class. This allows us to have this style only work
+   * only if we know position:fixed is actually available, to avoid unpredictable
+   * behavior by bad browsers.
+   */ 
+  .fixed-supported #middle-center .spothead.sticky,
+  .fixed-supported #top-left .spothead {
+    width:@column-width;
+    position:fixed;
+    overflow:hidden;
+    top:0px;
+    z-index:100;
+  }
+  .fixed-supported #middle-center .spothead { width: 100%;}
+  .fixed-supported #top-left .inner {
+    margin-top:@header-size;
+  }
+  .spot h2.title,
+  .spothead .title {
+    text-align:center;
+  }
+  
+  /**
+   * Search
+   *
+   * Uncomment to hide filter button and force dropdowns to show
+   */
+  
+  /*.search-filter-wrap { display:block !important; }*/
+  /*.search-wrap .button-wrap { display: none;}*/  
+  
+  .search-filter {
+    width:15%;
+    border-right: 1px solid white;
+    border-bottom:none;
+    text-align:left;
+    padding:@global-padding/4 @global-padding/2;
+    float:left;
+  }
+  .search-filter.view-mode {
+    padding-left:@global-padding;
+  }
+  .fixed-supported .one-spot.search #middle-center .inner {margin-top:0;}
+  .fixed-supported  .one-spot.search.search-filter-open #middle-center .inner {margin-top:@header-size*1.5;}
+  
+
+  
+  /* Pod Views */
+  .pods.small-view .pod a.link { height: 80px;}
+  .pods.small-view .pod a.link { width:300px; float:left; }
+  .pods.list-view a.link { overflow:auto; }
+  .pods.list-view .split {
+    width:30%;
+    padding:0 1%;
+    float:left;
+  }
+  .pods.list-view .description {
+    padding-right:1em;
+  }
+  .pods.list-view .time,
+  .pods.list-view .tickets {
+    display:block;
+  }
+  .pods.list-view .time {
+    margin-bottom:2em;
+  }
+
+  
+  
+}
+
+/**
+ * Large size Tablet & Desktop Media Query
+ *
+ * This query forces a full width layout, including left and right columns
+ * if present. All regions scroll independently and are fixed 100% height.
+ *
+ * body.large class added by response.js 
+ */
+@media only screen and (min-width:1024px) {
+
+  /* Show the left content*/
+  #top-left .inner {
+    display:block !important;
+  }
+  #top-left .spothead .button-wrap {
+    display:none;
+  }
+  
+  .inner-wrap {
+    height:100%;
+    overflow:visible;
+  }
+  
+  /* Since we are very wide now, we can reset this to defaults, we don't need it */
+  .middle-center-bottom-right {
+    margin:0;
+    padding:0;
+    overflow:visible;
+  }
+  
+  /* One Column */
+  .one-spot #middle-center {
+    min-height:100%;
+    max-height:100%;
+    overflow:auto;
+    overflow-x:hidden;   
+    -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling  
+  }
+
+
+  /* Two Columns */
+  .two-spot #top-left {
+    width:@column-width;
+    position:absolute;
+    left:0px;
+    top:0px;
+    min-height:100%;
+    max-height:100%;
+    overflow:auto;
+    overflow-x:hidden;   
+    -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
+  }
+  .two-spot .middle-center-bottom-right {
+    border-left:solid 1px @slint-blue;
+    margin-left:@column-width;
+    min-height:100%;
+    max-height:100%;
+    overflow:auto;
+    overflow-x:hidden;   
+    -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
+  }
+
+  /* Three Columns */
+  .three-spot #top-left {
+    width:@column-width;
+    position:absolute;
+    top:0px;
+    left:0px;
+    min-height:100%;
+    max-height:100%;
+    overflow:auto;
+    overflow-x:hidden;   
+    -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
+  }
+  /* This makes room for left column, like we did for the medium size */
+  .three-spot .middle-center-bottom-right {
+    margin-left:@column-width;
+    overflow:auto;
+    overflow-x:hidden;   
+    -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
+  }  
+  .three-spot #middle-center {
+    border-left:solid 1px @slint-blue;
+    margin-right:@column-width + 1; /* Fixes scrollbar bug */
+    min-height:100%;
+    max-height:100%;
+    overflow:auto;
+    overflow-x:hidden;   
+    -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
+  }
+  .three-spot #bottom-right {
+    border-left:solid 1px @slint-blue;
+    width:@column-width;
+    position:absolute;
+    right:0px;
+    top:0px;
+    min-height:100%;
+    max-height:100%;
+    overflow:auto;
+    -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
+  }
+  
+
+  /* Affix the headers */
+  .fixed-supported .one-spot #middle-center .spothead,
+  .fixed-supported .two-spot #middle-center .spothead.sticky,
+  .fixed-supported .two-spot #top-left .spothead,
+  .fixed-supported .three-spot .spothead {
+    width:@column-width;
+    position:fixed;
+    overflow:hidden;
+    z-index:100;
+  }
+  .fixed-supported .three-spot #bottom-right .spothead { margin-left:-1px; width:@column-width+1; /* TODO: REMOVE THIS HACK*/}
+  .fixed-supported .one-spot #middle-center .spothead {width:100%;}
+  .fixed-supported .two-spot #middle-center .spothead {width:100%;}
+  
+  .fixed-supported .two-spot #top-left .inner,
+  .fixed-supported .one-spot #middle-center .inner,
+  .fixed-supported .two-spot #middle-center .inner,
+  .fixed-supported .three-spot #top-left .inner,  
+  .fixed-supported .three-spot #middle-center .inner,
+  .fixed-supported .three-spot #bottom-right .inner {
+    margin-top:@header-size;
+  }
+  .fixed-supported .two-spot.feature #middle-center .inner {
+    margin-top:0; 
+  } 
+   
+  .fixed-supported .one-spot.nearby #middle-center .inner,
+  .fixed-supported .one-spot.bookmarks #middle-center .inner { margin-top:0;}
+  
+  .spot h2.title,
+  .spothead .title {
+    text-align:center;
+  }
+  
+  /* iOS 4.x and Android 2.x scrolling */
+  .overthrow-enabled  #top-left.overflow,
+  .overthrow-enabled .one-spot #middle-center.overflow,
+  .overthrow-enabled .three-spot #middle-center.overflow,
+  .overthrow-enabled .three-spot #bottom-right.overflow,
+  .overthrow-enabled .two-spot .middle-center-bottom-right.overflow {
+    overflow:auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /**
+   * Search
+   *
+   * Uncomment to hide filter button and force dropdowns to show
+   */  
+  
+  .search-filter-wrap { display:block !important; }
+  .search-wrap .button-wrap { display: none;}
+  .search-box-squeeze {margin-right:auto;}
+  .search-filter {
+    width:15%;
+    border-right: 1px solid white;
+    border-bottom:none;
+    text-align:left;
+    padding:@global-padding/4 @global-padding/2;
+    float:left;
+  }
+  .search-filter.view-mode {
+    padding-left:@global-padding;
+  }
+  .fixed-supported .one-spot.search #middle-center .inner {margin-top:@header-size*1.5;}
+  /*.fixed-supported  .one-spot.search.search-filter-open #middle-center .inner {margin-top:@header-size*1.5;}*/
+  
+  /* Pod Views */
+  .pods.small-view { max-width: 1460px; }
+  .pods.small-view .pod a.link { height:80px;}
+  .pods.small-view .pod a.link { width: 300px; float:left; }
+
+  .pods.list-view a.link { clear:both; overflow:auto;}
+  .pods.list-view .description {padding-right: 2em;}
+  .pods.list-view .split {
+    width:24.5%;
+    float:left;
+    text-align:left;
+    padding:0;
+  }
+  .pods.list-view .time,
+  .pods.list-view .image,
+  .pods.list-view .tickets {
+    display:block;
+  }
+
+  /* Slideshow */
+  .slideshow { width:50%;}
+  .slide {
+    min-height:100%;
+    max-height:100%;
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+  }
+  .slideshow-top h5 {margin-bottom:-1em;}
+  .sfarts-logo { display:block;}
+    
+  
+  /* Homepage */
+  .home .slideshow { float:left; z-index: 200;}
+  .home .highlights {
+    right:0;
+    left:50%;
+    bottom:0;
+    top:0;
+    position:absolute;
+    z-index:205;
+    background:@light-blue-slate;
+    padding:0;
+    height:100%;
+    h5 { line-height:@header-size/2;}
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .3); 
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .3);
+  }
+  .home .highlights .inside {
+     height:100%;
+     -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, .3); 
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, .3); 
+   }
+  .home .categories {
+    float:left;
+    width:@column-width;
+    select {display:none;}
+    ul.cat-list { display:block;}
+    .sponsored {    display:block; color:@inverse; margin-bottom:2em;}
+    padding:0;
+    margin:0;
+    background: @calendar-highlights;
+    min-height:100%;
+    max-height:100%;
+    overflow:auto;
+    overflow-x:hidden; 
+    -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
+    border-left:double 3px #000;
+    z-index:208;
+
+  }
+  .home .categories h5 {
+    background:none;
+    color:@inverse;
+    font-size:@base-font-size * 14/17;
+    margin: 10px 0 0 0;
+    padding:@global-padding/1.5;
+  }
+  .home ul.cat-list,
+  .home ul.cat-list li {
+    margin:0;
+    padding:0;
+    list-style:none;
+    background:none;
+  }
+
+  .home ul.cat-list li {
+    padding:0;
+  }
+
+  .home ul.cat-list li a {
+    display:block;
+    color:@inverse;
+    line-height:47px;
+    /* line-height: 41px; */
+    text-decoration:none;
+    font-family:'Avenir Next LT W01 Demi';
+    font-size:@base-font-size * 18/17;
+    border-bottom:solid 1px #FFF;
+    margin:0 @global-padding;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0 ease-in;
+    transition: none;
+  }
+  .home ul.cat-list li a.active,
+  .home ul.cat-list li a:hover {
+    color: @calendar-highlights;
+    background:url(../images/pointer-wide.svg) no-repeat;
+    background-position: center;
+    background-size:180px 41px;
+    /*200/56*/
+  }
+
+  .home .browse {
+    margin-left:@column-width;
+    padding:0;
+    height:100%;
+    background:@light-blue-slate;
+    z-index:206;
+  }
+  .home .browse .load-wrap {
+    max-height:100%;
+    min-height:100%;
+    overflow:auto;
+    overflow-x:hidden;   
+    -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling    
+  }
+  .home .browse .pods.grid-view {
+    max-width:1024px;
+    margin-left:0;
+  }
+  .home .browse-top {
+    /*display:block;*/
+    height:@header-size;
+    color:@slate;
+  }
+  .home .browse-top .split {
+    /* Very fiddly...thanks to masonry */
+    width:210px;
+    float:left;
+    padding:0 5px;
+    margin:0 5px;
+  }
+  .home .browse-top .split h5 {
+    margin-left:auto;
+    margin-right:auto;
+    line-height:1.75em;
+  }
+  .home .browse-top a.rss {
+    padding:1px 3px;
+    border:solid @slate 1px;
+    border-radius:4px;
+    font-size:@base-font-size * 9/17;
+    text-decoration:none;
+    color:@slate;
+    margin-left:1em;
+    margin-top:-1px;
+  }
+  .home .browse-top a.more { text-decoration:none; }
+  .home .browse-top a.more:hover { text-decoration:underline; }
+  
+  .home .highlights .handle {
+    height:100%;
+    width:15px;
+    position:absolute;
+    top:0px;
+    left:2px;
+    background: @calendar-highlights;
+    cursor: pointer;
+    border-left:double 3px rgba(0, 0, 0, .5);
+    z-index:49;
+  }
+  .home .highlights .drawer {
+    z-index:50;
+    height:50px;
+    width:17px;
+    position:absolute;
+    top:45%;
+    left:-6px;
+    background: @calendar-highlights url(../images/icon_collapse.png) center center no-repeat; /* hack to cache both images on load*/
+    background: @calendar-highlights url(../images/icon_expand.png) center center no-repeat;
+    cursor: pointer;
+    border-radius:1px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2); 
+     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);    
+  }
+  .home .highlights.open .drawer {
+    background-image: url(../images/icon_collapse.png);
+  }
+  /*
+  .home .highlights .pointer {
+    position:absolute;
+    height:70px;
+    width:237px;
+    top:0px;
+    left:18px;
+    background:url(../images/pointer-shadow.svg) no-repeat;
+    background-size:contain;
+    cursor:pointer;
+  }
+  */
+}
+/* Additional media queries for homepage */
+
+@media only screen and (min-width:1240px) {
+  .home .slideshow { width:41%}
+  .home .highlights { left:41%;}
+}
+@media only screen and (min-width:1440px) {
+  .home .slideshow { width:38%}
+  .home .highlights { left:38%;}
+  .large .fade-overlay {
+    padding:0 30% 15% 30%;
+  }  
+}
+@media only screen and (min-width:1640px) {
+  .home .slideshow { width:37%}
+  .home .highlights { left:37%;}
+  .home .browse-top { display:block; }
+}
+@media only screen and (min-width:1800px) {
+ 
+}
+@media only screen and (max-width:320px) {
+  html, body { width:320px;}
+}
+/**
+ * This is only used to fix an annoying bug with z-index and layout for datepicker.
+ * TODO: Remove this hack, package in small box and launch on spaceship towards the sun,
+ * where it can die a horrible, horrible death.
+ */
+@media only screen and (max-width: 600px) {
+  #ui-datepicker-div {
+    z-index:920 !important;  /*Make sure this floats above overlay*/
+    width:93% !important;
+    top:5px !important;
+    left:5px !important;
+    margin:0 auto !important;
+  }
+  .ui-datepicker td span, .ui-datepicker td a {
+    padding:.75em !important;
+  }
+  .ui-datepicker:before {
+    border-width:0px !important;
+  }
+}
+
+
+

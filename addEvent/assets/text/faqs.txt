@@ -1,0 +1,26 @@
+Q: What if, after I select our producing organization, some, but not all, of future events are already listed?
+
+A: There is no need to re-enter data for information that is already in the database. 
+
+Q: Do I have to scroll down to my Producing Organization? The list is so long!
+
+A: No. Simply highlight the Producing Organization field and begin typing the name of your organization. If it is in our database, it will appear.
+
+Q: What if our Producing Organization isn't in your database?
+
+A: If your Producing Organization or Venue is not listed (remember to check various naming possibilities—for eg., San Francisco Dance Co or SF Dance Company or The San Francisco Dance Company), it will have to be added. Click either "Add New Org" or "Add New Venue." Be sure to click the appropriate box. Fill out the information. 
+You will then be sent an email telling you that you are in the queue. SFArts.org will add your Producing Organization to the database and email you once it's been posted, at which time you can submit your event by filling out the entire form.
+
+Q: I am confused about how to enter dates on the form.
+
+A: We use a sophisticated system for handling events with complex dates. Begin by entering the start and end dates in the format shown, and then provide a detailed description of the specific days of the week and times the event is occurring. 
+
+For example, an event that has a run date of October 15-25 might be entered as follows: Start and End Dates: 10/15/2010-10/25/2010. Date detail: Fri Oct. 15 at 8 pm, Thu Oct 21 at 7 pm, and Mon Oct 25 at 8 pm. You give us the start and end dates, along with the description, and we will do the rest.
+
+Q: Will my event be posted immediately?
+
+A: No. Our staff must review it first. We will send you an email as soon as your information has been posted in our database.
+
+Q: What if I have a question that isn't addressed here?
+
+A: If you have additional questions or problems, email lrlarson at larsonassoc.org for help.
