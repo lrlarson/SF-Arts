@@ -16,8 +16,7 @@
   <link rel="stylesheet" href="fonts/fontello/css/sfarts_icons.css">
   <link rel="stylesheet" href="fonts/fontello/css/animation.css">
   <link rel="stylesheet" type="text/css" href="css/main.css" />
-  
-  
+
   <!--[if IE 7]>
     <link rel="stylesheet" href="fonts/fontello/sfarts_icons-ie7.css">
   <![endif]-->    
