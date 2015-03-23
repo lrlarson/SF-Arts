@@ -3,6 +3,8 @@
   
 <head>
   <meta charset="utf-8">
+  
+  
   <!--- init normal CFC for non ajax calls  --->
 
 <cfscript>
@@ -21,6 +23,10 @@ feature = sfData.getFeature(URL.featureID);
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.sfarts.org/feature.cfm?featureID=#featureID#&title=#feature.seoTitle#" />
 <meta property="og:image" content="http://www.sfarts.org/editorial_images/#feature.storyPic#" />
+
+ <META NAME ="title" CONTENT="#feature.headline#">
+<META NAME="description" CONTENT="#feature.teaser#">
+<META NAME="keywords" CONTENT="san francisco arts, bay area arts, sf arts, art, monthly, visual art, calendars, art, dance, music, theater, theatre, kids, children, , listings, festival, literature, books, literary, museum, gallery, galleries, film, video, listing, performance, event">
 </cfoutput>
   <title>SF/ARTS</title>
   <!-- meta name="viewport" content="width=device-width, initial-scale=1.0" -->
