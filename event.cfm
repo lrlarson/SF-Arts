@@ -262,6 +262,8 @@ otherEvents = sfData.getEventsByDispForEventPage(#currentEvent.disp#);
          </ul> 
       </div>
     </li>
+    <li><a href="http://sfarts.org/addevent/addevent.html">Submit Event</a></li>
+	
     <li>
       <a href="about.cfm" class="">About</a>
       <div class="submenu">
@@ -275,6 +277,9 @@ otherEvents = sfData.getEventsByDispForEventPage(#currentEvent.disp#);
         </ul>
       </div>
     </li>
+    <li>
+	<a href="http://www.sanfrancisco.travel">Visitor Information</a>
+	</li>
   </ul>
   </div><!-- /relative -->
 </div><!-- /menu-bar -->
@@ -524,18 +529,15 @@ otherEvents = sfData.getEventsByDispForEventPage(#currentEvent.disp#);
 <SCRIPT TYPE="text/javascript">var DID=12737;</SCRIPT>
 <SCRIPT SRC="http://sniff.visistat.com/sniff.js" TYPE="text/javascript"></SCRIPT>
 <!--VISISTAT SNIPPET//-->
-<script type="text/javascript">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-9189676-1']);
-  _gaq.push(['_trackPageview']);
+  ga('create', 'UA-9189676-1', 'auto');
+  ga('send', 'pageview');
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script> 
+</script>
 </body>
 </html>

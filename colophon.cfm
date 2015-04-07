@@ -236,19 +236,24 @@
          </ul> 
       </div>
     </li>
+  <li><a href="http://sfarts.org/addevent/addevent.html">Submit Event</a></li>
+	
     <li>
-      <a href="about.cfm">About</a>
+      <a href="about.cfm" class="">About</a>
       <div class="submenu">
         <ul class="menu-list">
           <li><a href="about.cfm">Overview</a></li>
           <li><a href="submission_policy.cfm">Submission Policy</a></li>
           <li><a href="http://sfarts.org/addevent/addevent.html">Submit Event</a></li>
           <li><a href="feedback_support.cfm">Feedback & Support</a></li>
-          <li><a href="colophon.cfm" class="side-list-selected">Colophon</a></li>
+          <li><a href="colophon.cfm">Colophon</a></li>
           <!---<li><a href="terms_of_use.cfm">Terms of Use</a></li>--->
         </ul>
       </div>
     </li>
+    <li>
+	<a href="http://www.sanfrancisco.travel">Visitor Information</a>
+	</li>
   </ul>
   </div><!-- /relative -->
 </div>
@@ -370,19 +375,15 @@
   <script src="js/response.min.js"></script>  
   <script src="js/compressed.js"></script>
   <script src="js/custom.js"></script>
-  <script type="text/javascript">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-9189676-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  ga('create', 'UA-9189676-1', 'auto');
+  ga('send', 'pageview');
 
 </script>
-  
 </body>
 </html>
